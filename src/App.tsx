@@ -8,10 +8,10 @@ const img = (ruta: string) => `${import.meta.env.BASE_URL}${ruta}`;
 
 export default function App() {
    // Temática y tipo de evento elegidos desde un diseño; "n" fuerza la actualización aunque se repitan.
-   const [tematica, setTematica] = useState<{ valor: string; tipo?: string; n: number }>({ valor: "", n: 0 });
+   const [tematica, setTematica] = useState<{ valor: string; tipo?: string; paquete?: string; n: number }>({ valor: "", n: 0 });
 
-   const irACotizar = (valor: string, tipo?: string) => {
-      setTematica((t) => ({ valor, tipo, n: t.n + 1 }));
+   const irACotizar = (valor: string, tipo?: string, paquete?: string) => {
+      setTematica((t) => ({ valor, tipo, paquete, n: t.n + 1 }));
       document.getElementById("cotiza")?.scrollIntoView({ behavior: "smooth" });
    };
 

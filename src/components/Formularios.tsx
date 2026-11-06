@@ -8,7 +8,7 @@ import { IconoWhatsApp, Seccion } from "./ui";
 export function Cotizador({
    tematicaInicial,
 }: {
-   tematicaInicial: { valor: string; tipo?: string; n: number };
+   tematicaInicial: { valor: string; tipo?: string; paquete?: string; n: number };
 }) {
    const [datos, setDatos] = useState({
       cliente: "",
@@ -30,6 +30,7 @@ export function Cotizador({
             ...d,
             tematica: tematicaInicial.valor,
             tipo: tematicaInicial.tipo && tiposEvento.includes(tematicaInicial.tipo) ? tematicaInicial.tipo : d.tipo,
+            paquete: paquetes.some((p) => p.id === tematicaInicial.paquete) ? (tematicaInicial.paquete as string) : d.paquete,
          }));
    }, [tematicaInicial]);
 

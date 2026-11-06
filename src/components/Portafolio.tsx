@@ -6,14 +6,32 @@ import {
    disenosPorPagina,
    linkWhatsApp,
    nombreCategoria,
+   paquetes,
    proyectos,
+   textoPrecio,
 } from "../config";
 import { Celular, IconoWhatsApp, Seccion } from "./ui";
 
 const img = (ruta: string) => `${import.meta.env.BASE_URL}${ruta}`;
 
 type Filtro = CategoriaId | "todos";
-type OnCotizar = (tematica: string, tipoEvento?: string) => void;
+type OnCotizar = (tematica: string, tipoEvento?: string, paquete?: string) => void;
+
+/** Botón "La quiero": temática, tipo de evento y paquete del diseño. */
+const cotizarDiseno = (p: Proyecto, onCotizar: OnCotizar) =>
+   onCotizar(p.tematica, nombreCategoria(p.categorias[0]), p.paquete);
+
+/** Etiqueta "Paquete Mágica · S/ 149" del diseño. */
+function EtiquetaPaquete({ p }: { p: Proyecto }) {
+   const paq = paquetes.find((x) => x.id === p.paquete);
+   if (!paq) return null;
+   return (
+      <span className="inline-flex w-max items-center gap-1.5 rounded-full bg-tinta px-3 py-1 text-xs font-bold text-white">
+         Paquete {paq.nombre}
+         <span className="text-sol">· {textoPrecio(paq)}</span>
+      </span>
+   );
+}
 
 /* ---------- Categoría en la URL: #disenos?categoria=quinceaneros ---------- */
 function leerCategoriaDeUrl(): Filtro | null {
@@ -437,6 +455,11 @@ function TarjetaDiseno({ p, onVer, onCotizar }: { p: Proyecto; onVer: () => void
                ))}
             </div>
             <h3 className="mt-3 text-xl font-bold">{p.titulo}</h3>
+            {p.paquete && (
+               <div className="mt-2">
+                  <EtiquetaPaquete p={p} />
+               </div>
+            )}
             <p className="mt-2 flex-1 text-sm leading-relaxed text-tinta/75">{p.descripcion}</p>
             <ul className="mt-4 flex flex-wrap gap-1.5">
                {p.destacados.map((d) => (
@@ -451,7 +474,7 @@ function TarjetaDiseno({ p, onVer, onCotizar }: { p: Proyecto; onVer: () => void
                </button>
                <button
                   type="button"
-                  onClick={() => onCotizar(p.tematica, nombreCategoria(p.categorias[0]))}
+                  onClick={() => cotizarDiseno(p, onCotizar)}
                   className="btn-rosa px-3 py-2.5 text-sm"
                >
                   La quiero
@@ -514,7 +537,7 @@ function VistaPrevia({
                      type="button"
                      onClick={() => {
                         onCerrar();
-                        onCotizar(proyecto.tematica, nombreCategoria(proyecto.categorias[0]));
+                        cotizarDiseno(proyecto, onCotizar);
                      }}
                      className="btn-rosa"
                   >

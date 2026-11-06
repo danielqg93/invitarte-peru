@@ -54,9 +54,13 @@ export type Proyecto = {
    destacados: string[];
    /** Palabras extra para el buscador (personajes, sinónimos). No se muestran. */
    palabrasClave?: string[];
+   /** Paquete que muestra este diseño (id de `paquetes`). Opcional. */
+   paquete?: "esencial" | "magica" | "personalizada";
 };
 
 const base = "https://danielqg93.github.io";
+/** Demos del motor de temas (proyecto invitarte-demos), publicadas en invitarte-peru.com/demos/. */
+const demos = `${import.meta.env.BASE_URL}demos`;
 
 export const proyectos: Proyecto[] = [
    {
@@ -143,6 +147,128 @@ export const proyectos: Proyecto[] = [
       fondo: "bg-cielo-suave",
       acento: "text-cielo",
       destacados: ["Burbujas", "Álbum", "Agendar", "Ubicación"],
+   },
+
+   /* ---------- Motor de temas (invitarte-demos) ---------- */
+   {
+      id: "retro",
+      titulo: "Aventura Retro",
+      tematica: "Videojuego retro 8 bits",
+      paquete: "personalizada",
+      palabrasClave: ["mario", "super mario", "mario bros", "luigi", "nintendo", "videojuego", "gamer", "pixel", "monedas", "8 bits", "arcade"],
+      categorias: ["ninos"],
+      descripcion:
+         "Mundo de plataformas en pixel art, monedas que giran, música chiptune original y un mini juego para juntar monedas.",
+      url: `${demos}/retro/`,
+      imagen: "proyectos/retro.jpg",
+      fondo: "bg-cielo-suave",
+      acento: "text-cielo",
+      destacados: ["Mini juego", "Pixel art", "Música 8 bits", "Link por invitado"],
+   },
+   {
+      id: "bloques",
+      titulo: "Mundo de Bloques",
+      tematica: "Bloques y construcción",
+      paquete: "personalizada",
+      palabrasClave: ["minecraft", "mine", "creeper", "steve", "bloques", "cubos", "pico", "diamantes", "gemas", "construir", "gamer", "videojuego"],
+      categorias: ["ninos"],
+      descripcion:
+         "Paisaje de cubos, cofre del tesoro y un mini juego para picar bloques y encontrar las gemas escondidas.",
+      url: `${demos}/bloques/`,
+      imagen: "proyectos/bloques.jpg",
+      fondo: "bg-menta-suave",
+      acento: "text-menta",
+      destacados: ["Mini juego", "Pixel art", "Música", "Lista de confirmados"],
+   },
+   {
+      id: "heroe",
+      titulo: "Héroe de la Ciudad",
+      tematica: "Superhéroes de cómic",
+      paquete: "personalizada",
+      palabrasClave: ["spiderman", "spider-man", "hombre araña", "araña", "telaraña", "superhéroe", "marvel", "avengers", "héroe", "cómic", "ciudad"],
+      categorias: ["ninos"],
+      descripcion:
+         "Estilo cómic con telarañas, ciudad de noche, explosiones ¡POW! y un mini juego para atrapar robots traviesos.",
+      url: `${demos}/heroe/`,
+      imagen: "proyectos/heroe.jpg",
+      fondo: "bg-rosa-suave",
+      acento: "text-rosa-oscuro",
+      destacados: ["Mini juego", "Estilo cómic", "Confeti", "Música"],
+   },
+   {
+      id: "aloha",
+      titulo: "Aloha Tropical",
+      tematica: "Playa hawaiana",
+      paquete: "magica",
+      palabrasClave: ["stitch", "lilo", "lilo y stitch", "hawai", "hawaiana", "aloha", "playa", "surf", "tropical", "ohana", "luau", "verano"],
+      categorias: ["ninos", "adultos"],
+      descripcion:
+         "Palmeras, hibiscos y olas animadas, con melodía tropical, galería de fotos y pases por invitado.",
+      url: `${demos}/aloha/`,
+      imagen: "proyectos/aloha.jpg",
+      fondo: "bg-cielo-suave",
+      acento: "text-cielo",
+      destacados: ["Olas animadas", "Música", "Galería", "Link por invitado"],
+   },
+   {
+      id: "hielo",
+      titulo: "Reino de Hielo",
+      tematica: "Castillo de hielo",
+      paquete: "magica",
+      palabrasClave: ["frozen", "elsa", "anna", "olaf", "princesa", "hielo", "nieve", "invierno", "copos", "castillo", "reino"],
+      categorias: ["ninos"],
+      descripcion:
+         "Castillo de cristal, copos de nieve que caen y una aurora suave, con melodía de caja musical y galería.",
+      url: `${demos}/hielo/`,
+      imagen: "proyectos/hielo.jpg",
+      fondo: "bg-lila-suave",
+      acento: "text-lila",
+      destacados: ["Nieve animada", "Música", "Galería", "Lista de confirmados"],
+   },
+   {
+      id: "juguetes",
+      titulo: "Mundo de Juguetes",
+      tematica: "Juguetes clásicos",
+      paquete: "magica",
+      palabrasClave: ["toy story", "woody", "buzz", "buzz lightyear", "jessie", "juguetes", "vaquero", "astronauta", "cohete", "pixar"],
+      categorias: ["ninos", "primer-anito"],
+      descripcion:
+         "Baúl de juguetes, cohete, sombrero vaquero y cubos ABC bajo un cielo de nubes, con música y galería.",
+      url: `${demos}/juguetes/`,
+      imagen: "proyectos/juguetes.jpg",
+      fondo: "bg-sol-suave",
+      acento: "text-orange-600",
+      destacados: ["Ilustraciones", "Música", "Galería", "Link por invitado"],
+   },
+   {
+      id: "cachorros",
+      titulo: "Cachorros Rescatistas",
+      tematica: "Perritos rescatistas",
+      paquete: "esencial",
+      palabrasClave: ["paw patrol", "patrulla canina", "chase", "marshall", "skye", "rubble", "perritos", "cachorros", "perros", "rescate", "bomberos", "policía"],
+      categorias: ["ninos"],
+      descripcion:
+         "Perritos con pañuelo de rescate, placa con huellita y huellas flotando. Simple, tierna y lista en poco tiempo.",
+      url: `${demos}/cachorros/`,
+      imagen: "proyectos/cachorros.jpg",
+      fondo: "bg-cielo-suave",
+      acento: "text-cielo",
+      destacados: ["Cuenta regresiva", "Ubicación", "Agendar", "Confirmación"],
+   },
+   {
+      id: "glam",
+      titulo: "Glam Rosa Kawaii",
+      tematica: "Moda rosa y kawaii",
+      paquete: "esencial",
+      palabrasClave: ["barbie", "hello kitty", "kitty", "rosado", "rosa", "glam", "fashion", "moda", "kawaii", "gatita", "muñeca", "princesa", "brillos"],
+      categorias: ["ninos"],
+      descripcion:
+         "Brillos, moños, tacones y una gatita kawaii con corona de flores, en tonos rosados y dorados.",
+      url: `${demos}/glam/`,
+      imagen: "proyectos/glam.jpg",
+      fondo: "bg-rosa-suave",
+      acento: "text-rosa-oscuro",
+      destacados: ["Cuenta regresiva", "Ubicación", "Agendar", "Confirmación"],
    },
 ];
 
