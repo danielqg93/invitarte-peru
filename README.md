@@ -35,6 +35,9 @@ Todo está en **`src/config.ts`** (busca `TODO`): nombre de la marca, número de
   son los "Tipos de evento" del cotizador.
 - Las categorías sin diseños muestran una tarjeta "lo creamos a tu medida" con botón para cotizar.
 - Diseños por página: `disenosPorPagina` (6 en computadora, 4 en celular).
+- Buscador por temática: busca en temática, título, descripción, destacados, categorías y en
+  `palabrasClave` (opcional, no se muestra). Agrega ahí personajes o sinónimos que la gente
+  podría escribir, ej. `palabrasClave: ["goku", "dragon ball", "anime"]`.
 - Link directo a una categoría: `https://tuweb/#disenos?categoria=quinceaneros`.
 
 ## Comandos

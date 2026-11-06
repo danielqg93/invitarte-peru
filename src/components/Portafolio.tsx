@@ -43,9 +43,40 @@ function usePorPagina() {
    return porPagina;
 }
 
+/* ---------- Buscador: sin tildes ni mayúsculas, todas las palabras deben coincidir ---------- */
+const normalizar = (t: string) =>
+   t
+      .normalize("NFD")
+      .replace(/[̀-ͯ]/g, "")
+      .toLowerCase()
+      .trim();
+
+const textoBuscable = new Map(
+   proyectos.map((p) => [
+      p.id,
+      normalizar(
+         [
+            p.tematica,
+            p.titulo,
+            p.descripcion,
+            ...p.destacados,
+            ...(p.palabrasClave ?? []),
+            ...p.categorias.map(nombreCategoria),
+         ].join(" "),
+      ),
+   ]),
+);
+
+const coincide = (p: Proyecto, busqueda: string) => {
+   const palabras = normalizar(busqueda).split(/\s+/).filter(Boolean);
+   const texto = textoBuscable.get(p.id) ?? "";
+   return palabras.every((w) => texto.includes(w));
+};
+
 export function Portafolio({ onCotizar }: { onCotizar: OnCotizar }) {
    const [abierto, setAbierto] = useState<Proyecto | null>(null);
    const [filtro, setFiltro] = useState<Filtro>(() => leerCategoriaDeUrl() ?? "todos");
+   const [busqueda, setBusqueda] = useState("");
    const [pagina, setPagina] = useState(1);
    const porPagina = usePorPagina();
    const inicioRef = useRef<HTMLDivElement>(null);
@@ -66,13 +97,20 @@ export function Portafolio({ onCotizar }: { onCotizar: OnCotizar }) {
       return () => window.removeEventListener("hashchange", alCambiarHash);
    }, []);
 
-   const conteo = useMemo(() => {
-      const c: Record<string, number> = { todos: proyectos.length };
-      for (const p of proyectos) for (const id of p.categorias) c[id] = (c[id] ?? 0) + 1;
-      return c;
-   }, []);
+   const buscando = busqueda.trim().length > 0;
+   const encontrados = useMemo(
+      () => (buscando ? proyectos.filter((p) => coincide(p, busqueda)) : proyectos),
+      [busqueda, buscando],
+   );
 
-   const lista = filtro === "todos" ? proyectos : proyectos.filter((p) => p.categorias.includes(filtro));
+   // Los números de cada categoría reflejan la búsqueda actual.
+   const conteo = useMemo(() => {
+      const c: Record<string, number> = { todos: encontrados.length };
+      for (const p of encontrados) for (const id of p.categorias) c[id] = (c[id] ?? 0) + 1;
+      return c;
+   }, [encontrados]);
+
+   const lista = filtro === "todos" ? encontrados : encontrados.filter((p) => p.categorias.includes(filtro));
    const totalPaginas = Math.max(1, Math.ceil(lista.length / porPagina));
    const paginaActual = Math.min(pagina, totalPaginas);
    const visibles = lista.slice((paginaActual - 1) * porPagina, paginaActual * porPagina);
@@ -101,6 +139,44 @@ export function Portafolio({ onCotizar }: { onCotizar: OnCotizar }) {
       >
          <div ref={inicioRef} className="scroll-mt-24" />
 
+         {/* Buscador por temática */}
+         <form role="search" onSubmit={(e) => e.preventDefault()} className="mx-auto mb-6 max-w-xl">
+            <label htmlFor="buscar-tematica" className="sr-only">
+               Buscar por temática
+            </label>
+            <div className="relative">
+               <span className="pointer-events-none absolute left-5 top-1/2 -translate-y-1/2 text-xl" aria-hidden="true">
+                  🔍
+               </span>
+               <input
+                  id="buscar-tematica"
+                  type="search"
+                  value={busqueda}
+                  onChange={(e) => {
+                     setBusqueda(e.target.value);
+                     setPagina(1);
+                  }}
+                  onKeyDown={(e) => e.key === "Escape" && setBusqueda("")}
+                  placeholder="Busca tu temática: safari, dulces, anime, conejita…"
+                  autoComplete="off"
+                  className="campo h-14 rounded-full pl-14 pr-14 text-base shadow-sm [&::-webkit-search-cancel-button]:hidden"
+               />
+               {buscando && (
+                  <button
+                     type="button"
+                     onClick={() => {
+                        setBusqueda("");
+                        setPagina(1);
+                     }}
+                     aria-label="Borrar búsqueda"
+                     className="absolute right-3 top-1/2 grid h-9 w-9 -translate-y-1/2 place-items-center rounded-full bg-tinta/5 text-lg font-bold text-tinta/60 hover:bg-rosa-suave hover:text-rosa"
+                  >
+                     ✕
+                  </button>
+               )}
+            </div>
+         </form>
+
          {/* Categorías: en celular se deslizan de lado */}
          <div
             role="group"
@@ -122,9 +198,9 @@ export function Portafolio({ onCotizar }: { onCotizar: OnCotizar }) {
 
          <p className="mb-8 text-center text-sm text-tinta/55" aria-live="polite">
             {lista.length > 0
-               ? `Mostrando ${desde}–${hasta} de ${lista.length} ${lista.length === 1 ? "diseño" : "diseños"}`
+               ? `Mostrando ${desde}–${hasta} de ${lista.length} ${lista.length === 1 ? "diseño" : "diseños"}${buscando ? ` para “${busqueda.trim()}”` : ""}`
                : " "}
-            {categoriaActual && "detalle" in categoriaActual && ` · ${categoriaActual.detalle}`}
+            {!buscando && categoriaActual && "detalle" in categoriaActual && ` · ${categoriaActual.detalle}`}
          </p>
 
          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -132,7 +208,17 @@ export function Portafolio({ onCotizar }: { onCotizar: OnCotizar }) {
                <TarjetaDiseno key={p.id} p={p} onVer={() => setAbierto(p)} onCotizar={onCotizar} />
             ))}
 
-            {lista.length === 0 && categoriaActual && (
+            {lista.length === 0 && buscando && (
+               <SinResultados
+                  busqueda={busqueda.trim()}
+                  categoria={categoriaActual}
+                  hayEnOtras={filtro !== "todos" && encontrados.length > 0}
+                  onVerTodas={() => elegir("todos")}
+                  onCotizar={onCotizar}
+               />
+            )}
+
+            {lista.length === 0 && !buscando && categoriaActual && (
                <article className="flex flex-col items-center rounded-[2rem] border-4 border-dashed border-rosa/30 bg-white px-6 py-14 text-center sm:col-span-2 lg:col-span-3">
                   <div className="text-6xl" aria-hidden="true">
                      {categoriaActual.icono}
@@ -190,6 +276,52 @@ export function Portafolio({ onCotizar }: { onCotizar: OnCotizar }) {
             <VistaPrevia proyecto={abierto} onCerrar={() => setAbierto(null)} onCotizar={onCotizar} />
          )}
       </Seccion>
+   );
+}
+
+function SinResultados({
+   busqueda,
+   categoria,
+   hayEnOtras,
+   onVerTodas,
+   onCotizar,
+}: {
+   busqueda: string;
+   categoria?: (typeof categorias)[number];
+   hayEnOtras: boolean;
+   onVerTodas: () => void;
+   onCotizar: OnCotizar;
+}) {
+   return (
+      <article className="flex flex-col items-center rounded-[2rem] border-4 border-dashed border-rosa/30 bg-white px-6 py-14 text-center sm:col-span-2 lg:col-span-3">
+         <div className="text-6xl" aria-hidden="true">
+            🔎
+         </div>
+         <h3 className="mt-4 text-2xl font-bold sm:text-3xl">
+            No encontramos “{busqueda}”{categoria ? ` en ${categoria.nombre}` : ""}
+         </h3>
+         <p className="mt-2 max-w-lg text-lg text-tinta/70">
+            ¡Pero lo podemos diseñar para ti! Cuéntanos tu idea y te enviamos una propuesta con tu temática.
+         </p>
+         <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+            {hayEnOtras && (
+               <button type="button" onClick={onVerTodas} className="btn-borde">
+                  Buscar en todas las categorías
+               </button>
+            )}
+            <button type="button" onClick={() => onCotizar(busqueda, categoria?.nombre)} className="btn-rosa">
+               Cotizar “{busqueda}”
+            </button>
+            <a
+               href={linkWhatsApp(`Hola 👋 Quiero una invitación digital con temática de ${busqueda}.`)}
+               target="_blank"
+               rel="noreferrer"
+               className="btn-wsp"
+            >
+               <IconoWhatsApp /> Escribir por WhatsApp
+            </a>
+         </div>
+      </article>
    );
 }
 

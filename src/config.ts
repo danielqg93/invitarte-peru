@@ -52,6 +52,8 @@ export type Proyecto = {
    fondo: string;
    acento: string;
    destacados: string[];
+   /** Palabras extra para el buscador (personajes, sinónimos). No se muestran. */
+   palabrasClave?: string[];
 };
 
 const base = "https://danielqg93.github.io";
@@ -61,6 +63,7 @@ export const proyectos: Proyecto[] = [
       id: "missy",
       titulo: "Missy · Mi primer añito",
       tematica: "Conejita y flores",
+      palabrasClave: ["conejo", "conejita", "bunny", "flores", "rosado", "rosa", "niña", "bebé", "elegante", "mariposas"],
       categorias: ["primer-anito"],
       descripcion:
          "Elegante y tierna, con fotos de la cumpleañera, burbujas, música de fondo y confirmación de asistencia con nombre de cada invitado.",
@@ -79,6 +82,7 @@ export const proyectos: Proyecto[] = [
       id: "dragonball",
       titulo: "Gran Torneo de Cumpleaños",
       tematica: "Anime de guerreros",
+      palabrasClave: ["dragon ball", "goku", "anime", "manga", "esferas", "superhéroe", "niño", "acción", "cómic"],
       categorias: ["ninos"],
       descripcion:
          "Estilo cómic con aura de energía, medidor de nivel de poder, credencial de luchador y un juego de 7 esferas escondidas.",
@@ -97,6 +101,7 @@ export const proyectos: Proyecto[] = [
       id: "dulces",
       titulo: "Mundo de Caramelo",
       tematica: "Dulces y helados",
+      palabrasClave: ["candy", "caramelo", "golosinas", "helado", "postres", "cupcake", "pastelería", "dulcería", "rosado"],
       categorias: ["ninos"],
       descripcion:
          "Chispas que caen, glaseado que gotea, boleto dorado y un juego para armar tu helado que se envía con la confirmación.",
@@ -115,6 +120,7 @@ export const proyectos: Proyecto[] = [
       id: "safari",
       titulo: "Expedición Safari",
       tematica: "Safari tierno",
+      palabrasClave: ["animales", "selva", "jungla", "león", "jirafa", "elefante", "cebra", "wild one", "zoológico", "explorador"],
       categorias: ["primer-anito", "ninos"],
       descripcion:
          "Animalitos ilustrados, portada con parallax, pasaporte de explorador, mapa de la expedición y galería tipo polaroid.",
@@ -128,6 +134,7 @@ export const proyectos: Proyecto[] = [
       id: "plimplim",
       titulo: "Mi 2do añito",
       tematica: "Payasito y burbujas",
+      palabrasClave: ["plim plim", "payaso", "payasito", "burbujas", "nubes", "azul", "circo"],
       categorias: ["ninos"],
       descripcion:
          "Cielo azul con nubes y burbujas, colores vivos, cuenta regresiva, álbum de fotos y botón para agendar el evento.",
