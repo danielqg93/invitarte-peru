@@ -58,20 +58,20 @@ export type Proyecto = {
    paquete?: "esencial" | "magica" | "personalizada";
 };
 
-const base = "https://danielqg93.github.io";
 /** Demos del motor de temas (proyecto invitarte-demos), publicadas en invitarte-peru.com/demos/. */
 const demos = `${import.meta.env.BASE_URL}demos`;
 
 export const proyectos: Proyecto[] = [
    {
       id: "missy",
-      titulo: "Missy · Mi primer añito",
+      titulo: "Conejita en Flor",
       tematica: "Conejita y flores",
+      paquete: "magica",
       palabrasClave: ["conejo", "conejita", "bunny", "flores", "rosado", "rosa", "niña", "bebé", "elegante", "mariposas"],
       categorias: ["primer-anito"],
       descripcion:
-         "Elegante y tierna, con fotos de la cumpleañera, burbujas, música de fondo y confirmación de asistencia con nombre de cada invitado.",
-      url: `${base}/invitacion-misssy/`,
+         "Elegante y tierna para el primer añito: foto de portada, burbujas, música, itinerario y un código personal para cada invitado.",
+      url: `${demos}/missy/`,
       imagen: "proyectos/missy.jpg",
       fondo: "bg-rosa-suave",
       acento: "text-rosa-oscuro",
@@ -86,11 +86,12 @@ export const proyectos: Proyecto[] = [
       id: "dragonball",
       titulo: "Gran Torneo de Cumpleaños",
       tematica: "Anime de guerreros",
+      paquete: "personalizada",
       palabrasClave: ["dragon ball", "goku", "anime", "manga", "esferas", "superhéroe", "niño", "acción", "cómic"],
       categorias: ["ninos"],
       descripcion:
          "Estilo cómic con aura de energía, medidor de nivel de poder, credencial de luchador y un juego de 7 esferas escondidas.",
-      url: `${base}/invitacion-dragonball/`,
+      url: `${demos}/dragonball/`,
       imagen: "proyectos/dragonball.jpg",
       fondo: "bg-sol-suave",
       acento: "text-orange-600",
@@ -105,11 +106,12 @@ export const proyectos: Proyecto[] = [
       id: "dulces",
       titulo: "Mundo de Caramelo",
       tematica: "Dulces y helados",
+      paquete: "personalizada",
       palabrasClave: ["candy", "caramelo", "golosinas", "helado", "postres", "cupcake", "pastelería", "dulcería", "rosado"],
       categorias: ["ninos"],
       descripcion:
          "Chispas que caen, glaseado que gotea, boleto dorado y un juego para armar tu helado que se envía con la confirmación.",
-      url: `${base}/invitacion-dulces/`,
+      url: `${demos}/dulces/`,
       imagen: "proyectos/dulces.jpg",
       fondo: "bg-lila-suave",
       acento: "text-lila",
@@ -124,11 +126,12 @@ export const proyectos: Proyecto[] = [
       id: "safari",
       titulo: "Expedición Safari",
       tematica: "Safari tierno",
+      paquete: "magica",
       palabrasClave: ["animales", "selva", "jungla", "león", "jirafa", "elefante", "cebra", "wild one", "zoológico", "explorador"],
       categorias: ["primer-anito", "ninos"],
       descripcion:
          "Animalitos ilustrados, portada con parallax, pasaporte de explorador, mapa de la expedición y galería tipo polaroid.",
-      url: `${base}/invitacion-safary/`,
+      url: `${demos}/safari/`,
       imagen: "proyectos/safari.jpg",
       fondo: "bg-menta-suave",
       acento: "text-menta",
@@ -138,11 +141,12 @@ export const proyectos: Proyecto[] = [
       id: "plimplim",
       titulo: "Mi 2do añito",
       tematica: "Payasito y burbujas",
+      paquete: "magica",
       palabrasClave: ["plim plim", "payaso", "payasito", "burbujas", "nubes", "azul", "circo"],
       categorias: ["ninos"],
       descripcion:
          "Cielo azul con nubes y burbujas, colores vivos, cuenta regresiva, álbum de fotos y botón para agendar el evento.",
-      url: `${base}/ivitacion-plimplim/`,
+      url: `${demos}/plimplim/`,
       imagen: "proyectos/plimplim.jpg",
       fondo: "bg-cielo-suave",
       acento: "text-cielo",
