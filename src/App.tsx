@@ -36,11 +36,9 @@ export default function App() {
 
 function Logo() {
    return (
-      <a href="#inicio" className="flex items-center gap-2 font-titulo text-2xl font-bold">
-         <span className="grid h-10 w-10 place-items-center rounded-2xl bg-rosa text-xl text-white shadow-[0_4px_0_#C93A6C]">
-            ✉
-         </span>
-         {marca.nombre}
+      <a href="#inicio" className="flex items-center gap-2.5" aria-label={`${marca.nombre} - inicio`}>
+         <img src={img("logo/icono.svg")} alt="" className="h-10 w-10" />
+         <img src={img("logo/texto.svg")} alt={marca.nombre} className="h-7 w-auto" />
       </a>
    );
 }
@@ -284,9 +282,7 @@ function Pie() {
    return (
       <footer className="bg-tinta py-10 text-white/70">
          <div className="contenedor flex flex-col items-center justify-between gap-4 text-center text-sm sm:flex-row sm:text-left">
-            <div className="text-white">
-               <Logo />
-            </div>
+            <img src={img("logo/logo-horizontal-blanco.svg")} alt={marca.nombre} className="h-14 w-auto" />
             <p>{marca.eslogan}</p>
             <p>
                © {new Date().getFullYear()} {marca.nombre}
