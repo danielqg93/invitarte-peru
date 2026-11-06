@@ -25,7 +25,17 @@ Todo está en **`src/config.ts`** (busca `TODO`): nombre de la marca, número de
 
 1. Publica la invitación (GitHub Pages) y copia su URL.
 2. Guarda una captura vertical (400×820 aprox.) en `public/proyectos/<id>.jpg`.
-3. Agrega un objeto al arreglo `proyectos` en `src/config.ts`.
+3. Agrega un objeto al arreglo `proyectos` en `src/config.ts`, con su campo
+   `categorias` (una o varias; la primera es la que se preselecciona en el cotizador):
+   `categorias: ["primer-anito", "ninos"]`.
+
+### Categorías y paginación
+
+- Las categorías están en `categorias` (`src/config.ts`): nombre, ícono y orden. También
+  son los "Tipos de evento" del cotizador.
+- Las categorías sin diseños muestran una tarjeta "lo creamos a tu medida" con botón para cotizar.
+- Diseños por página: `disenosPorPagina` (6 en computadora, 4 en celular).
+- Link directo a una categoría: `https://tuweb/#disenos?categoria=quinceaneros`.
 
 ## Comandos
 

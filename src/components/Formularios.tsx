@@ -5,7 +5,11 @@ import { IconoWhatsApp, Seccion } from "./ui";
 /* ------------------------------------------------------------------
  *  COTIZADOR: arma un mensaje ordenado y lo abre en WhatsApp.
  * ------------------------------------------------------------------ */
-export function Cotizador({ tematicaInicial }: { tematicaInicial: { valor: string; n: number } }) {
+export function Cotizador({
+   tematicaInicial,
+}: {
+   tematicaInicial: { valor: string; tipo?: string; n: number };
+}) {
    const [datos, setDatos] = useState({
       cliente: "",
       telefono: "",
@@ -19,9 +23,14 @@ export function Cotizador({ tematicaInicial }: { tematicaInicial: { valor: strin
    });
    const [elegidas, setElegidas] = useState<string[]>(["Cuenta regresiva", "Confirmación de asistencia (RSVP)"]);
 
-   // Cuando el usuario pulsa "La quiero" en un diseño, se precarga la temática.
+   // Cuando el usuario pulsa "La quiero" en un diseño o categoría, se precargan temática y tipo de evento.
    useEffect(() => {
-      if (tematicaInicial.n > 0) setDatos((d) => ({ ...d, tematica: tematicaInicial.valor }));
+      if (tematicaInicial.n > 0)
+         setDatos((d) => ({
+            ...d,
+            tematica: tematicaInicial.valor,
+            tipo: tematicaInicial.tipo && tiposEvento.includes(tematicaInicial.tipo) ? tematicaInicial.tipo : d.tipo,
+         }));
    }, [tematicaInicial]);
 
    const set = (campo: keyof typeof datos) => (e: { target: { value: string } }) =>
