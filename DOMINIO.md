@@ -43,6 +43,35 @@ Cloudflare no envía correos.
 | TXT | `cf2024-1._domainkey` | `v=DKIM1; …` | Firma DKIM |
 | TXT | `_dmarc` | `v=DMARC1; p=none; rua=mailto:cotiza@invitarte-peru.com` | DMARC (en modo observación) |
 
+#### Responder como `cotiza@` desde Gmail ("Enviar correo como")
+
+Cloudflare no envía correo, así que se envía con los servidores de Gmail. Se configura desde la
+computadora (la app del celular no tiene esta opción, pero luego toma el alias sola).
+
+1. **Verificación en 2 pasos** activada: myaccount.google.com → Seguridad.
+2. **Contraseña de aplicación**: myaccount.google.com/apppasswords → nombre `Invitarte cotiza`
+   → copiar la clave de 16 letras (solo se muestra una vez; no guardarla en este archivo).
+3. Gmail → ⚙️ → Ver toda la configuración → **Cuentas e importación → Enviar correo como →
+   Añadir otra dirección**:
+   - Nombre: `Invitarte` · Dirección: `cotiza@invitarte-peru.com` · "Tratar como un alias" marcado
+   - SMTP `smtp.gmail.com` · puerto `587` · usuario: el Gmail completo · contraseña: la clave de
+     aplicación · **TLS**
+   - Confirmar con el código que llega a `cotiza@` (Cloudflare lo reenvía al mismo Gmail).
+4. Marcar **"Responder desde la misma dirección a la que se envió el mensaje"** (opcional:
+   "establecer como predeterminada").
+5. Firma: Configuración → General → Firma, asignada a `cotiza@invitarte-peru.com`.
+6. Probar enviando a otra cuenta y elegir `cotiza@` en el campo **De**.
+
+**Limitaciones**
+
+- Algunos clientes de correo muestran "enviado por gmail.com".
+- Estos correos **no pasan DMARC** del dominio (los firma Gmail, no `invitarte-peru.com`). Con
+  `p=none` se entregan igual. **No cambiar el DMARC a `quarantine` ni `reject`** mientras se use
+  este método, o los correos propios irán a spam o rebotarán.
+- Si se revoca la contraseña de aplicación o se cambia la contraseña de Google, hay que volver a
+  ponerla en "Enviar correo como" (editar información).
+- Para envío 100 % alineado con el dominio: migrar a Zoho Mail o Google Workspace.
+
 Para agregar otra dirección (ej. `hola@`): Email Routing → Routing rules → Create address.
 Si algún día se cambia a Zoho o Google Workspace, hay que **desactivar Email Routing** primero
 (no pueden coexistir: ambos necesitan los MX). Si se agrega un servicio que envíe correos
