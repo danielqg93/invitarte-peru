@@ -173,7 +173,11 @@ export const paquetes = [
       id: "esencial",
       nombre: "Esencial",
       /** Precio a mostrar, ej: "S/ 79". Déjalo "" para mostrar "A cotizar". */
-      precio: "", // TODO
+      precio: "S/ 79",
+      /** true muestra "desde" antes del precio. */
+      desde: false,
+      /** Precio para quinceañeros y matrimonios. Déjalo "" para ocultarlo. */
+      precioEspecial: "S/ 129",
       descripcion: "Una plantilla de nuestro catálogo con tus datos.",
       incluye: [
          "Datos del evento",
@@ -185,7 +189,9 @@ export const paquetes = [
    {
       id: "magica",
       nombre: "Mágica",
-      precio: "", // TODO
+      precio: "S/ 149",
+      desde: false,
+      precioEspecial: "S/ 199",
       descripcion: "Tu temática adaptada con fotos, música y RSVP.",
       incluye: [
          "Todo lo Esencial",
@@ -199,7 +205,9 @@ export const paquetes = [
    {
       id: "personalizada",
       nombre: "Personalizada",
-      precio: "", // TODO
+      precio: "S/ 299",
+      desde: true,
+      precioEspecial: "S/ 399",
       descripcion: "Diseño desde cero con tu temática e interacciones únicas.",
       incluye: [
          "Todo lo Mágico",
@@ -210,6 +218,19 @@ export const paquetes = [
       ],
    },
 ];
+
+/** Servicios adicionales que se muestran bajo los paquetes. Deja [] para ocultarlos. */
+export const extras = [
+   { nombre: "Entrega urgente (menos de 48 h)", precio: "+S/ 40", icono: "⚡" },
+   { nombre: "Más de 100 links personalizados por invitado", precio: "+S/ 30", icono: "💌" },
+   { nombre: "Cambios después de entregada (el primero es gratis)", precio: "S/ 15 c/u", icono: "✏️" },
+   { nombre: "Mini juego interactivo en Esencial o Mágica", precio: "+S/ 60", icono: "🎮" },
+   { nombre: "Video corto de la invitación para estados o reels", precio: "+S/ 25", icono: "🎬" },
+];
+
+/** Texto completo de precio para mostrar: "S/ 79" o "desde S/ 299". */
+export const textoPrecio = (p: { precio: string; desde?: boolean }) =>
+   p.precio ? `${p.desde ? "desde " : ""}${p.precio}` : "A cotizar";
 
 export const preguntas = [
    {
@@ -234,7 +255,7 @@ export const preguntas = [
    },
    {
       p: "¿Cómo se paga?",
-      r: "Aceptamos Yape, Plin y transferencia. Se separa con un adelanto y el saldo se paga al entregar.",
+      r: "Aceptamos Yape, Plin y transferencia. Empezamos con el 50 % de adelanto y el otro 50 % se paga al entregarte el link.",
    },
 ];
 

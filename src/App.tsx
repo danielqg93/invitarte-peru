@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Contacto, Cotizador } from "./components/Formularios";
 import { Portafolio } from "./components/Portafolio";
 import { Celular, IconoWhatsApp, Seccion } from "./components/ui";
-import { linkWhatsApp, marca, paquetes, preguntas, proyectos } from "./config";
+import { extras, linkWhatsApp, marca, paquetes, preguntas, proyectos } from "./config";
 
 const img = (ruta: string) => `${import.meta.env.BASE_URL}${ruta}`;
 
@@ -239,7 +239,16 @@ function Paquetes({ onCotizar }: { onCotizar: () => void }) {
                   )}
                   <h3 className="text-2xl font-bold">{p.nombre}</h3>
                   <p className="mt-1 text-sm opacity-70">{p.descripcion}</p>
-                  <p className="mt-5 font-titulo text-3xl font-bold">{p.precio || "A cotizar"}</p>
+                  <p className="mt-5 font-titulo font-bold">
+                     {p.precio && p.desde && <span className="mr-1.5 text-base font-semibold opacity-70">desde</span>}
+                     <span className="text-4xl">{p.precio || "A cotizar"}</span>
+                  </p>
+                  {p.precio && p.precioEspecial && (
+                     <p className="mt-1 text-xs opacity-60">
+                        Quinceañeros y matrimonios: {p.desde ? "desde " : ""}
+                        {p.precioEspecial}
+                     </p>
+                  )}
                   <ul className="mt-5 flex-1 space-y-2 text-sm">
                      {p.incluye.map((i) => (
                         <li key={i} className="flex gap-2">
@@ -254,7 +263,28 @@ function Paquetes({ onCotizar }: { onCotizar: () => void }) {
                </div>
             ))}
          </div>
-         <p className="mt-6 text-center text-xs text-tinta/50">*Cambios dentro del diseño acordado.</p>
+         <p className="mt-6 text-center text-xs text-tinta/50">
+            Precios en soles. Quinceañeros y matrimonios tienen más secciones (padrinos, itinerario, mesa de regalos).
+            <br />
+            *Cambios dentro del diseño acordado.
+         </p>
+
+         {extras.length > 0 && (
+            <div className="mx-auto mt-14 max-w-5xl">
+               <h3 className="text-center text-2xl font-bold">Extras para tu invitación</h3>
+               <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                  {extras.map((x) => (
+                     <li key={x.nombre} className="flex items-center gap-3 rounded-2xl bg-white p-4">
+                        <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-crema text-xl" aria-hidden="true">
+                           {x.icono}
+                        </span>
+                        <span className="flex-1 text-sm font-semibold leading-snug">{x.nombre}</span>
+                        <span className="shrink-0 font-titulo font-bold text-rosa">{x.precio}</span>
+                     </li>
+                  ))}
+               </ul>
+            </div>
+         )}
       </Seccion>
    );
 }
