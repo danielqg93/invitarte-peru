@@ -27,6 +27,27 @@ Todos en **DNS only** (nube gris).
 | CNAME | `www` | `danielqg93.github.io` | `www` redirige al dominio principal |
 | TXT | `_github-pages-challenge-danielqg93` | `991894138519f411524b8241ddeeb5` | Verificación del dominio en GitHub. **No borrar** |
 
+### Correo: Cloudflare Email Routing
+
+El correo del dominio **solo se recibe** en Cloudflare y se reenvía al Gmail personal.
+Cloudflare no envía correos.
+
+- `cotiza@invitarte-peru.com` → Gmail personal (Email → Email Routing → Routing rules)
+- Los registros MX, SPF y DKIM los creó Cloudflare y aparecen como **Locked/Blocked**: es normal,
+  no tocarlos.
+
+| Tipo | Nombre | Contenido | Para qué |
+|---|---|---|---|
+| MX | `@` | `route1.mx.cloudflare.net`, `route2…`, `route3…` | Recibir correo en Cloudflare |
+| TXT | `@` | `v=spf1 include:_spf.mx.cloudflare.net ~all` | SPF |
+| TXT | `cf2024-1._domainkey` | `v=DKIM1; …` | Firma DKIM |
+| TXT | `_dmarc` | `v=DMARC1; p=none; rua=mailto:cotiza@invitarte-peru.com` | DMARC (en modo observación) |
+
+Para agregar otra dirección (ej. `hola@`): Email Routing → Routing rules → Create address.
+Si algún día se cambia a Zoho o Google Workspace, hay que **desactivar Email Routing** primero
+(no pueden coexistir: ambos necesitan los MX). Si se agrega un servicio que envíe correos
+(Gmail SMTP, Zoho…), sumar su `include:` al registro SPF en lugar de crear un segundo SPF.
+
 ### En el repositorio `invitarte-peru`
 
 - Settings → Pages → Source: **GitHub Actions**
