@@ -152,6 +152,21 @@ export const proyectos: Proyecto[] = [
       acento: "text-cielo",
       destacados: ["Burbujas", "Álbum", "Agendar", "Ubicación"],
    },
+   {
+      id: "boda",
+      titulo: "Jardín Botánico",
+      tematica: "Boda elegante en jardín",
+      paquete: "personalizada",
+      palabrasClave: ["boda", "matrimonio", "casamiento", "novios", "aros", "anillos", "jardín", "flores", "margaritas", "elegante", "verde", "religioso", "civil"],
+      categorias: ["matrimonios"],
+      descripcion:
+         "Portada tipo sobre, pase personal por invitado, ceremonias, padrinos, nuestra historia, mesa de regalos y álbum de invitados.",
+      url: `${demos}/boda/`,
+      imagen: "proyectos/boda.jpg",
+      fondo: "bg-menta-suave",
+      acento: "text-menta",
+      destacados: ["Pase por invitado", "Mesa de regalos", "Itinerario", "Música"],
+   },
 
    /* ---------- Motor de temas (invitarte-demos) ---------- */
    {

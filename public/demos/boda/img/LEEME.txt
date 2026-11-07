@@ -1,0 +1,15 @@
+IMÁGENES (public/img/)
+======================
+La invitación funciona sin agregar nada: usa fotos de relleno de Unsplash y
+todas las flores son SVG (src/decor.tsx).
+
+Para usar fotos reales, cópialas aquí y pon el nombre en src/config.ts, ej.:
+
+  imagenes.portada   foto del sobre (vertical, se recorta en arco)
+  imagenes.hero      foto principal (vertical 4:5)
+  imagenes.cierre    foto final a todo el ancho (horizontal)
+  eventos[].foto     foto de cada lugar (horizontal)
+  historia.hitos[].foto
+  sesion.destacada / sesion.fotos
+
+Recomendado: JPG de 1200-1600 px de ancho y menos de 400 KB cada una.
