@@ -167,6 +167,21 @@ export const proyectos: Proyecto[] = [
       acento: "text-menta",
       destacados: ["Pase por invitado", "Mesa de regalos", "Itinerario", "Música"],
    },
+   {
+      id: "princesa-sapo",
+      titulo: "Una Noche en el Bayou",
+      tematica: "La princesa y el sapo",
+      paquete: "personalizada",
+      palabrasClave: ["princesa", "sapo", "rana", "tiana", "princesa y el sapo", "beso", "pantano", "bayou", "luciérnagas", "nueva orleans", "jazz", "verde", "dorado", "quince", "xv", "15 años"],
+      categorias: ["quinceaneros"],
+      descripcion:
+         "Noche en el pantano con luciérnagas y estrella de los deseos. Para abrirla, el invitado le da un beso al sapo.",
+      url: `${demos}/princesa-sapo/`,
+      imagen: "proyectos/princesa-sapo.jpg",
+      fondo: "bg-menta-suave",
+      acento: "text-menta",
+      destacados: ["Beso al sapo", "Pase real", "Estrella de deseos", "Lluvia de sobres"],
+   },
 
    /* ---------- Motor de temas (invitarte-demos) ---------- */
    {

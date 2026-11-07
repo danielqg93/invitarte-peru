@@ -1,0 +1,12 @@
+IMÁGENES (public/img/)
+======================
+La invitación funciona sin agregar nada: la princesa, el sapo, los nenúfares
+y todo el decorado son SVG (src/decor.tsx).
+
+Para usar fotos reales, cópialas aquí y pon el nombre en src/config.ts:
+
+  imagenes.hero      foto principal, vertical 3:4 (se recorta en arco).
+                     Si queda "", se muestra la ilustración de la princesa.
+  galeria.fotos      fotos de la galería "Mis recuerdos" (verticales 3:4)
+
+Recomendado: JPG de 1000-1400 px de ancho y menos de 400 KB cada una.
