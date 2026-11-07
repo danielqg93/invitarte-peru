@@ -1,0 +1,13 @@
+IMÁGENES (public/img/)
+======================
+La invitación ya funciona con fotos de Unsplash (ver CREDITOS.md) y con
+ilustraciones SVG propias (paloma, vela, rama de olivo, concha: src/decor.tsx).
+
+Para usar fotos reales, cópialas aquí y pon el nombre en src/config.ts:
+
+  imagenes.hero      foto principal, vertical 3:4 (se recorta en arco).
+                     Ideas: el bebé con su ropón, las manos de los papás.
+                     Si queda "", se muestra la ilustración de la paloma.
+  galeria.fotos      fotos de la galería (verticales 3:4)
+
+Recomendado: JPG de 1000-1400 px de ancho y menos de 400 KB cada una.

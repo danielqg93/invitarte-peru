@@ -212,6 +212,36 @@ export const proyectos: Proyecto[] = [
       acento: "text-cielo",
       destacados: ["Votación", "Pistas", "Sobre sellado", "Gafete VIP"],
    },
+   {
+      id: "bautizo",
+      titulo: "Luz y Bendición",
+      tematica: "Bautizo en marfil y dorado",
+      paquete: "magica",
+      palabrasClave: ["bautizo", "bautismo", "bebé", "vela", "paloma", "olivo", "religioso", "iglesia", "padrinos", "bendición", "niño", "niña", "dorado"],
+      categorias: ["bautizos"],
+      descripcion:
+         "Marfil, dorado y ramas de olivo; el invitado enciende la vela para abrirla. Incluye padrinos, programa y libro de bendiciones.",
+      url: `${demos}/bautizo/`,
+      imagen: "proyectos/bautizo.jpg",
+      fondo: "bg-sol-suave",
+      acento: "text-orange-600",
+      destacados: ["Vela interactiva", "Libro de bendiciones", "Padrinos", "Galería"],
+   },
+   {
+      id: "primera-comunion",
+      titulo: "Las Puertas del Templo",
+      tematica: "Primera Comunión",
+      paquete: "magica",
+      palabrasClave: ["primera comunión", "comunion", "comunión", "cáliz", "iglesia", "templo", "vitral", "religioso", "catequesis", "padrinos", "niña", "niño", "dorado"],
+      categorias: ["bautizos"],
+      descripcion:
+         "El invitado abre las puertas del templo bajo un vitral. Incluye misa y celebración, padrinos y velas encendidas por los invitados.",
+      url: `${demos}/primera-comunion/`,
+      imagen: "proyectos/primera-comunion.jpg",
+      fondo: "bg-rosa-suave",
+      acento: "text-rosa-oscuro",
+      destacados: ["Puertas que se abren", "Velas de oración", "Padrinos", "Galería"],
+   },
 
    /* ---------- Motor de temas (invitarte-demos) ---------- */
    {
