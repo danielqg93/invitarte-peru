@@ -1,0 +1,17 @@
+IMÁGENES (public/img/)
+======================
+La invitación ya funciona con fotos de Unsplash (ver CREDITOS.md) y con
+ilustraciones SVG originales (lightstick, luna, ciudad, franja coreana:
+src/decor.tsx).
+
+Para usar fotos reales, cópialas aquí y pon el nombre en src/config.ts:
+
+  imagenes.hero      foto principal, vertical 3:4 (marco de neón).
+                     Ideal: la cumpleañera con su look de idol.
+  imagenes.cierre    fondo de la sección final (horizontal, oscura).
+  galeria.fotos      fotos de la galería "Backstage" (verticales 3:4)
+
+Recomendado: JPG de 1000-1600 px de ancho y menos de 400 KB cada una.
+
+Nota: si agregas imágenes de personajes de películas o series, pertenecen
+a sus respectivos titulares de derechos.

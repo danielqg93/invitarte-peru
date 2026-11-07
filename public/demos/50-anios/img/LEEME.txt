@@ -1,0 +1,15 @@
+IMÁGENES (public/img/)
+======================
+La invitación funciona sin agregar nada: las copas, el emblema del 50, los
+abanicos y el vinilo son SVG (src/decor.tsx), y las fotos de ejemplo vienen
+de Unsplash.
+
+Para usar fotos reales, cópialas aquí y pon el nombre en src/config.ts:
+
+  imagenes.principal   foto del cumpleañero/a, vertical 3:4.
+                       Si queda "", se muestra el emblema dorado del 50.
+  lugar.foto           foto del salón (horizontal)
+  decadas.lista[].foto una foto por década (cuadrada)
+  galeria.fotos        fotos de la galería (verticales 4:5)
+
+Recomendado: JPG de 1000-1400 px de ancho y menos de 400 KB cada una.

@@ -242,6 +242,36 @@ export const proyectos: Proyecto[] = [
       acento: "text-rosa-oscuro",
       destacados: ["Puertas que se abren", "Velas de oración", "Padrinos", "Galería"],
    },
+   {
+      id: "50-anios",
+      titulo: "Medio Siglo",
+      tematica: "Art déco negro y dorado",
+      paquete: "personalizada",
+      palabrasClave: ["50 años", "cincuenta", "medio siglo", "cumpleaños adulto", "elegante", "negro", "dorado", "art déco", "gatsby", "champán", "brindis", "gala", "40", "60"],
+      categorias: ["especiales", "adultos"],
+      descripcion:
+         "Negro y dorado art déco; el invitado brinda para abrirla. Medio siglo en números, historia por décadas y pase VIP.",
+      url: `${demos}/50-anios/`,
+      imagen: "proyectos/50-anios.jpg",
+      fondo: "bg-sol-suave",
+      acento: "text-orange-600",
+      destacados: ["Brindis animado", "Historia por décadas", "Pase VIP", "Deja tu brindis"],
+   },
+   {
+      id: "guerreras-kpop",
+      titulo: "Gira de las Guerreras K-pop",
+      tematica: "Concierto K-pop de neón",
+      paquete: "personalizada",
+      palabrasClave: ["kpop", "k-pop", "kpop demon hunters", "guerreras kpop", "idol", "idols", "concierto", "corea", "coreano", "neón", "lightstick", "bts", "blackpink", "huntrix", "niña", "adolescente", "morado", "rosado"],
+      categorias: ["ninos"],
+      descripcion:
+         "Concierto de neón bajo la luna; el invitado rasga su entrada para abrirla y elige el color de su lightstick, que cambia toda la invitación.",
+      url: `${demos}/guerreras-kpop/`,
+      imagen: "proyectos/guerreras-kpop.jpg",
+      fondo: "bg-lila-suave",
+      acento: "text-lila",
+      destacados: ["Entrada para rasgar", "Lightstick", "Setlist", "Pide tu canción"],
+   },
 
    /* ---------- Motor de temas (invitarte-demos) ---------- */
    {
