@@ -182,6 +182,36 @@ export const proyectos: Proyecto[] = [
       acento: "text-menta",
       destacados: ["Beso al sapo", "Pase real", "Estrella de deseos", "Lluvia de sobres"],
    },
+   {
+      id: "baby-shower",
+      titulo: "Entre Nubes y Globos",
+      tematica: "Baby shower pastel",
+      paquete: "magica",
+      palabrasClave: ["baby shower", "bebé", "bebe", "globos", "nubes", "pastel", "osito", "ropita", "pañales", "quiniela", "niña", "niño", "rosa", "celeste"],
+      categorias: ["baby-shower"],
+      descripcion:
+         "Nubes y globos en tonos pastel; el invitado suelta los globos para abrirla. Incluye quiniela del bebé y mesa de regalos.",
+      url: `${demos}/baby-shower/`,
+      imagen: "proyectos/baby-shower.jpg",
+      fondo: "bg-rosa-suave",
+      acento: "text-rosa-oscuro",
+      destacados: ["Quiniela del bebé", "Mesa de regalos", "Pase por invitado", "Galería"],
+   },
+   {
+      id: "revelacion-jefe",
+      titulo: "¿Jefe o Jefa?",
+      tematica: "Bebé jefe de oficina",
+      paquete: "personalizada",
+      palabrasClave: ["revelación", "revelacion", "género", "gender reveal", "baby boss", "bebé jefazo", "jefe", "jefa", "oficina", "niño o niña", "team", "votación"],
+      categorias: ["baby-shower"],
+      descripcion:
+         "El bebé convoca a una junta directiva: expediente confidencial, votación Team Jefe o Team Jefa, pistas y sobre sellado.",
+      url: `${demos}/revelacion-jefe/`,
+      imagen: "proyectos/revelacion-jefe.jpg",
+      fondo: "bg-cielo-suave",
+      acento: "text-cielo",
+      destacados: ["Votación", "Pistas", "Sobre sellado", "Gafete VIP"],
+   },
 
    /* ---------- Motor de temas (invitarte-demos) ---------- */
    {

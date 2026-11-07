@@ -1,0 +1,11 @@
+IMÁGENES (public/img/)
+======================
+La invitación funciona sin agregar nada: el bebé jefe, los globos y los
+íconos son SVG (src/decor.tsx), y las fotos de ejemplo vienen de Unsplash.
+
+Para usar fotos reales, cópialas aquí y pon el nombre en src/config.ts:
+
+  imagenes.papas    foto de los papás (se recorta cuadrada, estilo polaroid)
+  galeria.fotos     ecografías y fotos de la pancita (cuadradas)
+
+Recomendado: JPG de 1000-1400 px de ancho y menos de 400 KB cada una.
