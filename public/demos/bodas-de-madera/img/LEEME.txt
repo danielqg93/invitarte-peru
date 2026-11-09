@@ -1,0 +1,15 @@
+IMÁGENES (public/img/)
+======================
+La invitación funciona sin agregar nada: la rodaja de madera, las ramas y
+las hojas son SVG (src/decor.tsx), y las fotos de ejemplo vienen de Unsplash.
+
+Para usar fotos reales de Marly y Augustin, cópialas aquí y pon el nombre
+en src/config.ts:
+
+  imagenes.principal    foto de la pareja, vertical 3:4
+  imagenes.cierre       foto de fondo del final (horizontal)
+  lugar.foto            foto del local (horizontal)
+  anillos.lista[].foto  una foto por año (cuadrada)
+  galeria.fotos         fotos de la galería (verticales 4:5)
+
+Recomendado: JPG de 1000-1400 px de ancho y menos de 400 KB cada una.

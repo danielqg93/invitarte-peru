@@ -168,6 +168,21 @@ export const proyectos: Proyecto[] = [
       destacados: ["Pase por invitado", "Mesa de regalos", "Itinerario", "Música"],
    },
    {
+      id: "bodas-de-madera",
+      titulo: "Bodas de Madera",
+      tematica: "Renovación de votos · 5 años",
+      paquete: "personalizada",
+      palabrasClave: ["renovación de votos", "renovacion", "aniversario", "bodas de madera", "5 años", "cinco años", "aniversario de bodas", "matrimonio", "esposos", "árbol", "madera", "rústico", "cristiano", "evangélico", "anillos", "cofre"],
+      categorias: ["matrimonios"],
+      descripcion:
+         "Un árbol crece con hojas de corazón y, al abrirla, los corazones vuelan. Cinco años en cinco anillos, cuenta regresiva y deseos para la pareja.",
+      url: `${demos}/bodas-de-madera/`,
+      imagen: "proyectos/bodas-de-madera.jpg",
+      fondo: "bg-sol-suave",
+      acento: "text-orange-700",
+      destacados: ["Árbol de corazones", "5 años en anillos", "Pase por invitado", "Música cristiana"],
+   },
+   {
       id: "princesa-sapo",
       titulo: "Una Noche en el Bayou",
       tematica: "La princesa y el sapo",
