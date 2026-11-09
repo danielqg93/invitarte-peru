@@ -8,6 +8,7 @@ import {
    nombreCategoria,
    paquetes,
    proyectos,
+   mostrarPrecios,
    textoPrecio,
 } from "../config";
 import { Celular, IconoWhatsApp, Seccion } from "./ui";
@@ -28,7 +29,7 @@ function EtiquetaPaquete({ p }: { p: Proyecto }) {
    return (
       <span className="inline-flex w-max items-center gap-1.5 rounded-full bg-tinta px-3 py-1 text-xs font-bold text-white">
          Paquete {paq.nombre}
-         <span className="text-sol">· {textoPrecio(paq)}</span>
+         {mostrarPrecios && <span className="text-sol">· {textoPrecio(paq)}</span>}
       </span>
    );
 }

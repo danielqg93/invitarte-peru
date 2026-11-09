@@ -1,5 +1,5 @@
 import { type FormEvent, useEffect, useState } from "react";
-import { funciones, linkWhatsApp, marca, paquetes, proyectos, textoPrecio, tiposEvento } from "../config";
+import { funciones, linkWhatsApp, marca, mostrarPrecios, paquetes, proyectos, textoPrecio, tiposEvento } from "../config";
 import { IconoWhatsApp, Seccion } from "./ui";
 
 /* ------------------------------------------------------------------
@@ -48,7 +48,9 @@ export function Cotizador({
    const enviar = (e: FormEvent) => {
       e.preventDefault();
       const elegido = paquetes.find((p) => p.id === datos.paquete);
-      const paquete = elegido ? `${elegido.nombre} (${precioDe(elegido)})` : datos.paquete;
+      const paquete = elegido
+         ? `${elegido.nombre}${mostrarPrecios ? ` (${precioDe(elegido)})` : ""}`
+         : datos.paquete;
       const fecha = datos.fecha
          ? new Date(`${datos.fecha}T12:00`).toLocaleDateString("es-PE", { day: "numeric", month: "long", year: "numeric" })
          : "Por definir";
@@ -165,7 +167,9 @@ export function Cotizador({
                         />
                         <span className="flex items-baseline justify-between gap-2">
                            <span className="font-titulo text-lg font-semibold">{p.nombre}</span>
-                           <span className="whitespace-nowrap font-titulo font-bold text-rosa">{precioDe(p)}</span>
+                           {mostrarPrecios && (
+                              <span className="whitespace-nowrap font-titulo font-bold text-rosa">{precioDe(p)}</span>
+                           )}
                         </span>
                         <span className="mt-1 block text-sm text-tinta/65">{p.descripcion}</span>
                      </label>

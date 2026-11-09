@@ -433,6 +433,12 @@ export const tiposEvento: string[] = categorias.map((c) => c.nombre);
 export const nombreCategoria = (id: CategoriaId) =>
    categorias.find((c) => c.id === id)?.nombre ?? "";
 
+/**
+ * false = oculta todos los precios (paquetes, extras, etiquetas del catálogo
+ * y cotizador). Los precios de abajo se conservan para volver a mostrarlos.
+ */
+export const mostrarPrecios = false;
+
 export const paquetes = [
    {
       id: "esencial",
@@ -497,7 +503,7 @@ export const extras = [
 
 /** Texto completo de precio para mostrar: "S/ 49" o "desde S/ 189". */
 export const textoPrecio = (p: { precio: string; desde?: boolean }) =>
-   p.precio ? `${p.desde ? "desde " : ""}${p.precio}` : "A cotizar";
+   mostrarPrecios && p.precio ? `${p.desde ? "desde " : ""}${p.precio}` : "A cotizar";
 
 export const preguntas = [
    {

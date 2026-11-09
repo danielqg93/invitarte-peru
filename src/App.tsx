@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Contacto, Cotizador } from "./components/Formularios";
 import { Portafolio } from "./components/Portafolio";
 import { Celular, IconoWhatsApp, Seccion } from "./components/ui";
-import { extras, linkWhatsApp, marca, paquetes, preguntas, proyectos } from "./config";
+import { extras, linkWhatsApp, marca, mostrarPrecios, paquetes, preguntas, proyectos } from "./config";
 
 const img = (ruta: string) => `${import.meta.env.BASE_URL}${ruta}`;
 
@@ -240,10 +240,12 @@ function Paquetes({ onCotizar }: { onCotizar: () => void }) {
                   <h3 className="text-2xl font-bold">{p.nombre}</h3>
                   <p className="mt-1 text-sm opacity-70">{p.descripcion}</p>
                   <p className="mt-5 font-titulo font-bold">
-                     {p.precio && p.desde && <span className="mr-1.5 text-base font-semibold opacity-70">desde</span>}
-                     <span className="text-4xl">{p.precio || "A cotizar"}</span>
+                     {mostrarPrecios && p.precio && p.desde && (
+                        <span className="mr-1.5 text-base font-semibold opacity-70">desde</span>
+                     )}
+                     <span className="text-4xl">{(mostrarPrecios && p.precio) || "A cotizar"}</span>
                   </p>
-                  {p.precio && p.precioEspecial && (
+                  {mostrarPrecios && p.precio && p.precioEspecial && (
                      <p className="mt-1 text-xs opacity-60">
                         Quinceañeros y matrimonios: {p.desde ? "desde " : ""}
                         {p.precioEspecial}
@@ -269,7 +271,7 @@ function Paquetes({ onCotizar }: { onCotizar: () => void }) {
             ))}
          </div>
          <p className="mt-6 text-center text-xs text-tinta/50">
-            Precios en soles. Quinceañeros y matrimonios tienen más secciones (padrinos, itinerario, mesa de regalos).
+            {mostrarPrecios && "Precios en soles. "}Quinceañeros y matrimonios tienen más secciones (padrinos, itinerario, mesa de regalos).
             <br />
             *Cambios dentro del diseño acordado.
          </p>
@@ -284,7 +286,9 @@ function Paquetes({ onCotizar }: { onCotizar: () => void }) {
                            {x.icono}
                         </span>
                         <span className="flex-1 text-sm font-semibold leading-snug">{x.nombre}</span>
-                        <span className="shrink-0 font-titulo font-bold text-rosa">{x.precio}</span>
+                        {mostrarPrecios && (
+                           <span className="shrink-0 font-titulo font-bold text-rosa">{x.precio}</span>
+                        )}
                      </li>
                   ))}
                </ul>
