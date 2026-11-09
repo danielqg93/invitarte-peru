@@ -260,6 +260,11 @@ function Paquetes({ onCotizar }: { onCotizar: () => void }) {
                   <button type="button" onClick={onCotizar} className="btn-rosa mt-7">
                      Cotizar {p.nombre}
                   </button>
+                  {p.diasActiva > 0 && (
+                     <p className="mt-3 text-center text-xs opacity-70">
+                        🗓️ Web activa {p.diasActiva} días después del evento
+                     </p>
+                  )}
                </div>
             ))}
          </div>

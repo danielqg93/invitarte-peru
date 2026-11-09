@@ -443,6 +443,8 @@ export const paquetes = [
       desde: false,
       /** Precio para quinceañeros y matrimonios. Déjalo "" para ocultarlo. */
       precioEspecial: "S/ 69",
+      /** Días que la web sigue activa después del día del evento. */
+      diasActiva: 7,
       descripcion: "Una plantilla de nuestro catálogo con tus datos.",
       incluye: [
          "Datos del evento",
@@ -457,12 +459,13 @@ export const paquetes = [
       precio: "S/ 89",
       desde: false,
       precioEspecial: "S/ 109",
+      diasActiva: 15,
       descripcion: "Tu temática adaptada con fotos, música y RSVP.",
       incluye: [
          "Todo lo Esencial",
          "Galería de fotos",
          "Música de fondo",
-         "Link por invitado",
+         "Links personalizados por invitado",
          "Lista de confirmados",
       ],
       popular: true,
@@ -470,9 +473,10 @@ export const paquetes = [
    {
       id: "personalizada",
       nombre: "Personalizada",
-      precio: "S/ 119",
+      precio: "S/ 189",
       desde: true,
-      precioEspecial: "S/ 149",
+      precioEspecial: "S/ 249",
+      diasActiva: 30,
       descripcion: "Diseño desde cero con tu temática e interacciones únicas.",
       incluye: [
          "Todo lo Mágico",
@@ -486,14 +490,12 @@ export const paquetes = [
 
 /** Servicios adicionales que se muestran bajo los paquetes. Deja [] para ocultarlos. */
 export const extras = [
-   { nombre: "Entrega urgente (menos de 48 h)", precio: "+S/ 40", icono: "⚡" },
-   { nombre: "Más de 100 links personalizados por invitado", precio: "+S/ 30", icono: "💌" },
+   { nombre: "Entrega urgente (menos de 48 h)", precio: "+S/ 20", icono: "⚡" },
    { nombre: "Cambios después de entregada (el primero es gratis)", precio: "S/ 15 c/u", icono: "✏️" },
-   { nombre: "Mini juego interactivo en Esencial o Mágica", precio: "+S/ 60", icono: "🎮" },
-   { nombre: "Video corto de la invitación para estados o reels", precio: "+S/ 25", icono: "🎬" },
+   { nombre: "Mini juego interactivo en Esencial o Mágica", precio: "+S/ 25", icono: "🎮" },
 ];
 
-/** Texto completo de precio para mostrar: "S/ 49" o "desde S/ 119". */
+/** Texto completo de precio para mostrar: "S/ 49" o "desde S/ 189". */
 export const textoPrecio = (p: { precio: string; desde?: boolean }) =>
    p.precio ? `${p.desde ? "desde " : ""}${p.precio}` : "A cotizar";
 
