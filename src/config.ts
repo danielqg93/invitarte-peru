@@ -63,7 +63,7 @@ const demos = `${import.meta.env.BASE_URL}demos`;
 
 export const proyectos: Proyecto[] = [
    {
-      id: "missy",
+      id: "conejita",
       titulo: "Conejita en Flor",
       tematica: "Conejita y flores",
       paquete: "personalizada",
@@ -71,8 +71,8 @@ export const proyectos: Proyecto[] = [
       categorias: ["primer-anito"],
       descripcion:
          "Tierna y elegante para el primer añito: ilustraciones animadas, 7 portadas a elegir, contenido que aparece al hacer scroll y el juego \"Sopla la velita\".",
-      url: `${demos}/missy/`,
-      imagen: "proyectos/missy.jpg",
+      url: `${demos}/conejita/`,
+      imagen: "proyectos/conejita.jpg",
       fondo: "bg-rosa-suave",
       acento: "text-rosa-oscuro",
       destacados: [
