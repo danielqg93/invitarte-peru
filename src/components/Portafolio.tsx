@@ -21,7 +21,7 @@ type OnCotizar = (tematica: string, tipoEvento?: string, paquete?: string) => vo
 const cotizarDiseno = (p: Proyecto, onCotizar: OnCotizar) =>
    onCotizar(p.tematica, nombreCategoria(p.categorias[0]), p.paquete);
 
-/** Etiqueta "Paquete Mágica · S/ 149" del diseño. */
+/** Etiqueta "Paquete Mágica · S/ 89" del diseño. */
 function EtiquetaPaquete({ p }: { p: Proyecto }) {
    const paq = paquetes.find((x) => x.id === p.paquete);
    if (!paq) return null;

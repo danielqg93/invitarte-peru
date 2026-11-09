@@ -437,12 +437,12 @@ export const paquetes = [
    {
       id: "esencial",
       nombre: "Esencial",
-      /** Precio a mostrar, ej: "S/ 79". Déjalo "" para mostrar "A cotizar". */
-      precio: "S/ 79",
+      /** Precio a mostrar, ej: "S/ 49". Déjalo "" para mostrar "A cotizar". */
+      precio: "S/ 49",
       /** true muestra "desde" antes del precio. */
       desde: false,
       /** Precio para quinceañeros y matrimonios. Déjalo "" para ocultarlo. */
-      precioEspecial: "S/ 129",
+      precioEspecial: "S/ 69",
       descripcion: "Una plantilla de nuestro catálogo con tus datos.",
       incluye: [
          "Datos del evento",
@@ -454,9 +454,9 @@ export const paquetes = [
    {
       id: "magica",
       nombre: "Mágica",
-      precio: "S/ 149",
+      precio: "S/ 89",
       desde: false,
-      precioEspecial: "S/ 199",
+      precioEspecial: "S/ 109",
       descripcion: "Tu temática adaptada con fotos, música y RSVP.",
       incluye: [
          "Todo lo Esencial",
@@ -470,9 +470,9 @@ export const paquetes = [
    {
       id: "personalizada",
       nombre: "Personalizada",
-      precio: "S/ 299",
+      precio: "S/ 119",
       desde: true,
-      precioEspecial: "S/ 399",
+      precioEspecial: "S/ 149",
       descripcion: "Diseño desde cero con tu temática e interacciones únicas.",
       incluye: [
          "Todo lo Mágico",
@@ -493,7 +493,7 @@ export const extras = [
    { nombre: "Video corto de la invitación para estados o reels", precio: "+S/ 25", icono: "🎬" },
 ];
 
-/** Texto completo de precio para mostrar: "S/ 79" o "desde S/ 299". */
+/** Texto completo de precio para mostrar: "S/ 49" o "desde S/ 119". */
 export const textoPrecio = (p: { precio: string; desde?: boolean }) =>
    p.precio ? `${p.desde ? "desde " : ""}${p.precio}` : "A cotizar";
 
