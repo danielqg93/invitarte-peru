@@ -94,6 +94,11 @@ const coincide = (p: Proyecto, busqueda: string) => {
 
 export function Portafolio({ onCotizar }: { onCotizar: OnCotizar }) {
    const [abierto, setAbierto] = useState<Proyecto | null>(null);
+   /** En celular la demo se abre directo (el visor con iframe no se ve bien en pantallas chicas). */
+   const verDemo = (p: Proyecto) => {
+      if (window.matchMedia("(max-width: 767px)").matches) window.location.assign(p.url);
+      else setAbierto(p);
+   };
    const [filtro, setFiltro] = useState<Filtro>(() => leerCategoriaDeUrl() ?? "todos");
    const [busqueda, setBusqueda] = useState("");
    const [pagina, setPagina] = useState(1);
@@ -224,7 +229,7 @@ export function Portafolio({ onCotizar }: { onCotizar: OnCotizar }) {
 
          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {visibles.map((p) => (
-               <TarjetaDiseno key={p.id} p={p} onVer={() => setAbierto(p)} onCotizar={onCotizar} />
+               <TarjetaDiseno key={p.id} p={p} onVer={() => verDemo(p)} onCotizar={onCotizar} />
             ))}
 
             {lista.length === 0 && buscando && (
