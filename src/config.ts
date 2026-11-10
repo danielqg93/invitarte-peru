@@ -131,12 +131,12 @@ export const proyectos: Proyecto[] = [
       palabrasClave: ["animales", "selva", "jungla", "león", "jirafa", "elefante", "cebra", "wild one", "zoológico", "explorador"],
       categorias: ["primer-anito", "ninos"],
       descripcion:
-         "Animalitos ilustrados, portada con parallax, pasaporte de explorador, mapa de la expedición y galería tipo polaroid.",
+         "Animalitos ilustrados, 5 portadas (jeep, noche, foto, letrero y sabana), 5 bienvenidas, música de fondo, pasaporte de explorador, mapa de la expedición y galería tipo polaroid.",
       url: `${demos}/safari/`,
       imagen: "proyectos/safari.jpg",
       fondo: "bg-menta-suave",
       acento: "text-menta",
-      destacados: ["Pasaporte", "Parallax", "Polaroids", "Mapa"],
+      destacados: ["Jeep animado", "5 portadas", "Música", "Polaroids"],
    },
    {
       id: "plimplim",
