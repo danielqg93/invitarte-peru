@@ -110,16 +110,17 @@ export const proyectos: Proyecto[] = [
       palabrasClave: ["candy", "caramelo", "golosinas", "helado", "postres", "cupcake", "pastelería", "dulcería", "rosado"],
       categorias: ["ninos"],
       descripcion:
-         "Chispas que caen, glaseado que gotea, boleto dorado y un juego para armar tu helado que se envía con la confirmación.",
+         "Foto de la cumpleañera en una dona gigante, 4 bienvenidas (caramelo, frasco, boleto dorado, cupcake), música de Mundo de Caramelo, galería de fotos, animaciones al bajar y un juego para armar tu helado.",
       url: `${demos}/dulces/`,
       imagen: "proyectos/dulces.jpg",
       fondo: "bg-lila-suave",
       acento: "text-lila",
       destacados: [
          "Arma tu helado",
-         "Boleto dorado",
-         "Macarons",
-         "Animaciones",
+         "4 bienvenidas",
+         "3 portadas",
+         "Música",
+         "Galería",
       ],
    },
    {
