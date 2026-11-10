@@ -87,19 +87,19 @@ export const proyectos: Proyecto[] = [
       titulo: "Gran Torneo de Cumpleaños",
       tematica: "Anime de guerreros",
       paquete: "personalizada",
-      palabrasClave: ["dragon ball", "goku", "anime", "manga", "esferas", "superhéroe", "niño", "acción", "cómic"],
+      palabrasClave: ["dragon ball", "goku", "shenlong", "anime", "manga", "esferas", "superhéroe", "niño", "acción", "cómic"],
       categorias: ["ninos"],
       descripcion:
-         "Estilo cómic con aura de energía, medidor de nivel de poder, credencial de luchador y un juego de 7 esferas escondidas.",
+         "Estilo cómic con la foto del cumpleañero y Goku, Shenlong, música de Dragon Ball, medidor de nivel de poder, credencial de luchador y un juego de 7 esferas escondidas.",
       url: `${demos}/dragonball/`,
       imagen: "proyectos/dragonball.jpg",
       fondo: "bg-sol-suave",
       acento: "text-orange-600",
       destacados: [
+         "Foto en portada",
          "Juego de esferas",
+         "Música",
          "Credencial",
-         "Cuenta regresiva",
-         "Cómic",
       ],
    },
    {
