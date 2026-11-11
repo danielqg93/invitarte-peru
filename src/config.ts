@@ -161,12 +161,13 @@ export const proyectos: Proyecto[] = [
       palabrasClave: ["boda", "matrimonio", "casamiento", "novios", "aros", "anillos", "jardín", "flores", "margaritas", "elegante", "verde", "religioso", "civil"],
       categorias: ["matrimonios"],
       descripcion:
-         "Sobre con sello de lacre, lluvia de pétalos y el juego \"Raspa y descubre la fecha\". 4 bienvenidas y 4 portadas a elegir, pase personal por invitado, ceremonias, padrinos, mesa de regalos y álbum de invitados.",
-      url: `${demos}/boda/`,
+         "Invitación personalizada con el nombre y los pases de cada invitado, sobre con sello de lacre, lluvia de pétalos y el juego \"Raspa y descubre la fecha\". Incluye panel para enviar cada link por WhatsApp, 4 bienvenidas y 4 portadas a elegir.",
+      /** Abre con un invitado de ejemplo para mostrar la invitación personalizada. */
+      url: `${demos}/boda/#BOD002`,
       imagen: "proyectos/boda.jpg",
       fondo: "bg-menta-suave",
       acento: "text-menta",
-      destacados: ["Raspa la fecha", "Lluvia de pétalos", "Pase por invitado", "Música"],
+      destacados: ["Pase por invitado", "Raspa la fecha", "Lluvia de pétalos", "Envío por WhatsApp"],
    },
    {
       id: "bodas-de-madera",
