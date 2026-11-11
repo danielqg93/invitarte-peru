@@ -492,6 +492,8 @@ export const paquetes = [
          "Ilustraciones a medida",
          "Mini juego interactivo",
          "Animaciones especiales",
+         "Mesa y pase con QR por invitado",
+         "Check-in con escáner en la entrada",
          "Cambios ilimitados*",
       ],
    },
