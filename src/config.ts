@@ -161,12 +161,12 @@ export const proyectos: Proyecto[] = [
       palabrasClave: ["boda", "matrimonio", "casamiento", "novios", "aros", "anillos", "jardín", "flores", "margaritas", "elegante", "verde", "religioso", "civil"],
       categorias: ["matrimonios"],
       descripcion:
-         "4 bienvenidas (arco, sobre con lacre, foto, tarjeta) y 4 portadas (arco, foto, monograma, polaroid), pase personal por invitado, ceremonias, padrinos, nuestra historia, mesa de regalos y álbum de invitados.",
+         "Sobre con sello de lacre, lluvia de pétalos y el juego \"Raspa y descubre la fecha\". 4 bienvenidas y 4 portadas a elegir, pase personal por invitado, ceremonias, padrinos, mesa de regalos y álbum de invitados.",
       url: `${demos}/boda/`,
       imagen: "proyectos/boda.jpg",
       fondo: "bg-menta-suave",
       acento: "text-menta",
-      destacados: ["Pase por invitado", "Mesa de regalos", "Itinerario", "Música"],
+      destacados: ["Raspa la fecha", "Lluvia de pétalos", "Pase por invitado", "Música"],
    },
    {
       id: "bodas-de-madera",
