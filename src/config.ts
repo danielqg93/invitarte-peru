@@ -192,12 +192,13 @@ export const proyectos: Proyecto[] = [
       palabrasClave: ["princesa", "sapo", "rana", "tiana", "princesa y el sapo", "beso", "pantano", "bayou", "luciérnagas", "nueva orleans", "jazz", "verde", "dorado", "quince", "xv", "15 años"],
       categorias: ["quinceaneros"],
       descripcion:
-         "Noche en el pantano con luciérnagas y estrella de los deseos. Para abrirla, el invitado le da un beso al sapo.",
-      url: `${demos}/princesa-sapo/`,
+         "Noche en el bayou con la princesa, el sapo y el caimán. 6 bienvenidas (beso al sapo, libro de cuentos, estrella de los deseos…), 5 portadas, juego \"Raspa la fecha\", pase con mesa y QR de ingreso, y panel para enviar cada link por WhatsApp.",
+      /** Abre con un invitado de ejemplo para mostrar la invitación personalizada. */
+      url: `${demos}/princesa-sapo/#X4HTM6YZ`,
       imagen: "proyectos/princesa-sapo.jpg",
       fondo: "bg-menta-suave",
       acento: "text-menta",
-      destacados: ["Beso al sapo", "Pase real", "Estrella de deseos", "Lluvia de sobres"],
+      destacados: ["6 bienvenidas", "Mesa y QR de ingreso", "Raspa la fecha", "Check-in con escáner"],
    },
    {
       id: "baby-shower",
