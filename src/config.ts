@@ -163,7 +163,7 @@ export const proyectos: Proyecto[] = [
       descripcion:
          "Invitación personalizada con el nombre, los pases y la mesa de cada invitado, y un QR de ingreso que se escanea en la entrada para validar la invitación. Sobre con sello de lacre, lluvia de pétalos, juego \"Raspa y descubre la fecha\" y panel para enviar cada link por WhatsApp.",
       /** Abre con un invitado de ejemplo para mostrar la invitación personalizada. */
-      url: `${demos}/boda/#BOD002`,
+      url: `${demos}/boda/#WWCCN2ER`,
       imagen: "proyectos/boda.jpg",
       fondo: "bg-menta-suave",
       acento: "text-menta",
