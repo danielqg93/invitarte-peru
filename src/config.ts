@@ -161,7 +161,7 @@ export const proyectos: Proyecto[] = [
       palabrasClave: ["boda", "matrimonio", "casamiento", "novios", "aros", "anillos", "jardín", "flores", "margaritas", "elegante", "verde", "religioso", "civil"],
       categorias: ["matrimonios"],
       descripcion:
-         "Portada tipo sobre, pase personal por invitado, ceremonias, padrinos, nuestra historia, mesa de regalos y álbum de invitados.",
+         "4 bienvenidas (arco, sobre con lacre, foto, tarjeta) y 4 portadas (arco, foto, monograma, polaroid), pase personal por invitado, ceremonias, padrinos, nuestra historia, mesa de regalos y álbum de invitados.",
       url: `${demos}/boda/`,
       imagen: "proyectos/boda.jpg",
       fondo: "bg-menta-suave",
