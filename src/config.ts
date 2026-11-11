@@ -173,7 +173,7 @@ export const proyectos: Proyecto[] = [
       id: "bodas-de-madera",
       titulo: "Bodas de Madera",
       tematica: "Renovación de votos · 5 años",
-      paquete: "personalizada",
+      paquete: "magica",
       palabrasClave: ["renovación de votos", "renovacion", "aniversario", "bodas de madera", "5 años", "cinco años", "aniversario de bodas", "matrimonio", "esposos", "árbol", "madera", "rústico", "cristiano", "evangélico", "anillos", "cofre"],
       categorias: ["matrimonios"],
       descripcion:
