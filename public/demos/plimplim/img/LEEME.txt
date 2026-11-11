@@ -19,3 +19,13 @@ Los nombres se pueden cambiar en src/config.ts -> imagenes.
                         sus nombres en src/config.ts -> galeria.fotos
                         (ej. ["1.jpg", "2.jpg"]). Si la lista está vacía,
                         la sección de galería no aparece.
+
+  --- Portadas y bienvenidas (config.portada / config.bienvenidaActiva) ---
+  foto-cumple-cuadrada.jpg  Foto cuadrada con la cara centrada (portada "globos").
+  meili.png                 Mei Li, amiga de Plim Plim (PNG transparente).
+  fondo-cielo.jpg           Fondo de la portada "cielo".
+  fondo-globos.jpg          Fondo de la portada "globos".
+  fondo-burbujas.jpg        Fondo de la portada "burbujas".
+  fondo-nubes.jpg           Fondo de la bienvenida "nube".
+  Las fotos de ejemplo son de Unsplash (licencia Unsplash) y los personajes
+  de pngegg.com. Reemplaza foto-cumple*.jpg por las fotos reales del cliente.
