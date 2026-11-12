@@ -1,0 +1,13 @@
+IMÁGENES (public/img/)
+======================
+La invitación funciona sin agregar nada: el cáliz, la paloma, el rosetón,
+las velas y las puertas son SVG/CSS (src/decor.tsx), y las fotos de ejemplo
+de la galería vienen de Unsplash.
+
+Para usar fotos reales, cópialas aquí y pon el nombre en src/config.ts:
+
+  imagenes.principal   foto del niño/a, vertical 3:4 (se recorta en arco).
+                       Si queda "", se muestra la ilustración del cáliz.
+  galeria.fotos        fotos de la galería (verticales 3:4)
+
+Recomendado: JPG de 1000-1400 px de ancho y menos de 400 KB cada una.

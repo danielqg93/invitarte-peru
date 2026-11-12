@@ -254,11 +254,11 @@ export const proyectos: Proyecto[] = [
       categorias: ["bautizos"],
       descripcion:
          "El invitado abre las puertas del templo bajo un vitral. Incluye misa y celebración, padrinos y velas encendidas por los invitados.",
-      url: `${demos}/primera-comunion/`,
-      imagen: "proyectos/primera-comunion.jpg",
+      url: `${demos}/primera-comunion/?v=20261111`,
+      imagen: "proyectos/primera-comunion.jpg?v=20261111",
       fondo: "bg-rosa-suave",
       acento: "text-rosa-oscuro",
-      destacados: ["Puertas que se abren", "Velas de oración", "Padrinos", "Galería"],
+      destacados: ["5 bienvenidas", "4 portadas", "Velas de oración", "Padrinos"],
    },
    {
       id: "50-anios",
