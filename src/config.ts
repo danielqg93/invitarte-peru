@@ -208,9 +208,9 @@ export const proyectos: Proyecto[] = [
       palabrasClave: ["baby shower", "bebé", "bebe", "globos", "nubes", "pastel", "osito", "ropita", "pañales", "quiniela", "niña", "niño", "rosa", "celeste"],
       categorias: ["baby-shower"],
       descripcion:
-         "Nubes y globos en tonos pastel; el invitado abre un sobre con sello de huellitas y ve sus fotos en polaroids. Incluye quiniela del bebé y mesa de regalos.",
-      url: `${demos}/baby-shower/?v=20261111`,
-      imagen: "proyectos/baby-shower.jpg?v=20261111",
+         "Nubes y globos en tonos pastel; el invitado destapa una caja de regalo de la que salen globos y ve sus fotos en polaroids. Incluye quiniela del bebé y mesa de regalos.",
+      url: `${demos}/baby-shower/?v=20261111b`,
+      imagen: "proyectos/baby-shower.jpg?v=20261111b",
       fondo: "bg-rosa-suave",
       acento: "text-rosa-oscuro",
       destacados: ["5 bienvenidas", "4 portadas", "Quiniela del bebé", "Mesa de regalos"],
