@@ -34,7 +34,7 @@ function EtiquetaPaquete({ p }: { p: Proyecto }) {
    );
 }
 
-/* ---------- Categoría en la URL: #disenos?categoria=quinceaneros ---------- */
+/* ---------- Categoría y página en la URL: #disenos?categoria=quinceaneros&pagina=2 ---------- */
 function leerCategoriaDeUrl(): Filtro | null {
    const [ancla, query = ""] = window.location.hash.slice(1).split("?");
    if (ancla !== "disenos") return null;
@@ -42,8 +42,19 @@ function leerCategoriaDeUrl(): Filtro | null {
    return categorias.some((c) => c.id === id) ? (id as CategoriaId) : "todos";
 }
 
-function escribirCategoriaEnUrl(filtro: Filtro) {
-   const hash = filtro === "todos" ? "#disenos" : `#disenos?categoria=${filtro}`;
+function leerPaginaDeUrl(): number {
+   const [ancla, query = ""] = window.location.hash.slice(1).split("?");
+   if (ancla !== "disenos") return 1;
+   const n = Number.parseInt(new URLSearchParams(query).get("pagina") ?? "", 10);
+   return Number.isFinite(n) && n > 1 ? n : 1;
+}
+
+function escribirEnUrl(filtro: Filtro, pagina = 1) {
+   const params = new URLSearchParams();
+   if (filtro !== "todos") params.set("categoria", filtro);
+   if (pagina > 1) params.set("pagina", String(pagina));
+   const query = params.toString();
+   const hash = query ? `#disenos?${query}` : "#disenos";
    history.replaceState(null, "", `${window.location.pathname}${window.location.search}${hash}`);
 }
 
@@ -101,7 +112,12 @@ export function Portafolio({ onCotizar }: { onCotizar: OnCotizar }) {
    };
    const [filtro, setFiltro] = useState<Filtro>(() => leerCategoriaDeUrl() ?? "todos");
    const [busqueda, setBusqueda] = useState("");
-   const [pagina, setPagina] = useState(1);
+   const [pagina, setPaginaEstado] = useState(leerPaginaDeUrl);
+   /** Cambia la página y la deja en la URL (al recargar se mantiene). */
+   const setPagina = (n: number) => {
+      setPaginaEstado(n);
+      if (n !== pagina || window.location.hash.includes("pagina=")) escribirEnUrl(filtro, n);
+   };
    const porPagina = usePorPagina();
    const inicioRef = useRef<HTMLDivElement>(null);
 
@@ -114,7 +130,7 @@ export function Portafolio({ onCotizar }: { onCotizar: OnCotizar }) {
          const f = leerCategoriaDeUrl();
          if (f) {
             setFiltro(f);
-            setPagina(1);
+            setPaginaEstado(leerPaginaDeUrl());
          }
       };
       window.addEventListener("hashchange", alCambiarHash);
@@ -142,8 +158,8 @@ export function Portafolio({ onCotizar }: { onCotizar: OnCotizar }) {
 
    const elegir = (f: Filtro) => {
       setFiltro(f);
-      setPagina(1);
-      escribirCategoriaEnUrl(f);
+      setPaginaEstado(1);
+      escribirEnUrl(f);
    };
 
    const irAPagina = (n: number) => {
