@@ -9,5 +9,8 @@ Para usar fotos reales, cópialas aquí y pon el nombre en src/config.ts:
                      Ideas: la pancita, la ecografía, los papás.
                      Si queda "", se muestra la ilustración del osito.
   galeria.fotos      fotos de la galería (verticales 3:4)
+  imagenes.fondo     foto de fondo de toda la invitación (se ve suave; opacidadFondo)
+  imagenes.fotoGrande  foto vertical a pantalla completa (bienvenida y portada "foto")
+  imagenes.polaroids   tres fotos con su texto (portada "polaroid")
 
 Recomendado: JPG de 1000-1400 px de ancho y menos de 400 KB cada una.

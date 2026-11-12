@@ -213,7 +213,7 @@ export const proyectos: Proyecto[] = [
       imagen: "proyectos/baby-shower.jpg",
       fondo: "bg-rosa-suave",
       acento: "text-rosa-oscuro",
-      destacados: ["Quiniela del bebé", "Mesa de regalos", "Pase por invitado", "Galería"],
+      destacados: ["5 bienvenidas", "4 portadas", "Quiniela del bebé", "Mesa de regalos"],
    },
    {
       id: "revelacion-jefe",
