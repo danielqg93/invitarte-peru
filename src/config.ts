@@ -263,17 +263,18 @@ export const proyectos: Proyecto[] = [
    {
       id: "50-anios",
       titulo: "Medio Siglo",
-      tematica: "Art déco negro y dorado",
+      tematica: "Gala en champán y dorado",
       paquete: "personalizada",
-      palabrasClave: ["50 años", "cincuenta", "medio siglo", "cumpleaños adulto", "elegante", "negro", "dorado", "art déco", "gatsby", "champán", "brindis", "gala", "40", "60"],
+      palabrasClave: ["50 años", "cincuenta", "medio siglo", "cumpleaños adulto", "elegante", "negro", "dorado", "art déco", "gatsby", "champán", "champan", "brindis", "gala", "plateado", "plata", "velas", "torta", "40", "60"],
       categorias: ["especiales", "adultos"],
       descripcion:
-         "Negro y dorado art déco; el invitado brinda para abrirla. Medio siglo en números, historia por décadas y pase VIP.",
-      url: `${demos}/50-anios/`,
-      imagen: "proyectos/50-anios.jpg",
+         "Gala en champán y dorado (también en plateado o negro): el invitado brinda para abrirla. Juego \"Apaga las velas\" para descubrir la fecha, 5 bienvenidas y 5 portadas (revista de gala, polaroid, globos 50…), \"The Best Is Yet to Come\" de fondo, historia por décadas, pase VIP con mesa y QR de ingreso, y panel para enviar cada link por WhatsApp.",
+      /** Abre con un invitado de ejemplo para mostrar la invitación personalizada. */
+      url: `${demos}/50-anios/?v=20261111#DQYPZD3A`,
+      imagen: "proyectos/50-anios.jpg?v=20261111",
       fondo: "bg-sol-suave",
       acento: "text-orange-600",
-      destacados: ["Brindis animado", "Historia por décadas", "Pase VIP", "Deja tu brindis"],
+      destacados: ["Apaga las velas", "Mesa y QR de ingreso", "Check-in con escáner", "Envío por WhatsApp"],
    },
    {
       id: "guerreras-kpop",
