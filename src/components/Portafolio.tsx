@@ -34,7 +34,7 @@ function EtiquetaPaquete({ p }: { p: Proyecto }) {
    );
 }
 
-/* ---------- Categoría y página en la URL: #disenos?categoria=quinceaneros&pagina=2 ---------- */
+/* ---------- Búsqueda, categoría y página en la URL: #disenos?buscar=osito&categoria=baby-shower&pagina=2 ---------- */
 function leerCategoriaDeUrl(): Filtro | null {
    const [ancla, query = ""] = window.location.hash.slice(1).split("?");
    if (ancla !== "disenos") return null;
@@ -49,8 +49,15 @@ function leerPaginaDeUrl(): number {
    return Number.isFinite(n) && n > 1 ? n : 1;
 }
 
-function escribirEnUrl(filtro: Filtro, pagina = 1) {
+function leerBusquedaDeUrl(): string {
+   const [ancla, query = ""] = window.location.hash.slice(1).split("?");
+   if (ancla !== "disenos") return "";
+   return new URLSearchParams(query).get("buscar") ?? "";
+}
+
+function escribirEnUrl(filtro: Filtro, pagina: number, busqueda: string) {
    const params = new URLSearchParams();
+   if (busqueda.trim()) params.set("buscar", busqueda.trim());
    if (filtro !== "todos") params.set("categoria", filtro);
    if (pagina > 1) params.set("pagina", String(pagina));
    const query = params.toString();
@@ -111,13 +118,8 @@ export function Portafolio({ onCotizar }: { onCotizar: OnCotizar }) {
       else setAbierto(p);
    };
    const [filtro, setFiltro] = useState<Filtro>(() => leerCategoriaDeUrl() ?? "todos");
-   const [busqueda, setBusqueda] = useState("");
-   const [pagina, setPaginaEstado] = useState(leerPaginaDeUrl);
-   /** Cambia la página y la deja en la URL (al recargar se mantiene). */
-   const setPagina = (n: number) => {
-      setPaginaEstado(n);
-      if (n !== pagina || window.location.hash.includes("pagina=")) escribirEnUrl(filtro, n);
-   };
+   const [busqueda, setBusqueda] = useState(leerBusquedaDeUrl);
+   const [pagina, setPagina] = useState(leerPaginaDeUrl);
    const porPagina = usePorPagina();
    const inicioRef = useRef<HTMLDivElement>(null);
 
@@ -130,12 +132,21 @@ export function Portafolio({ onCotizar }: { onCotizar: OnCotizar }) {
          const f = leerCategoriaDeUrl();
          if (f) {
             setFiltro(f);
-            setPaginaEstado(leerPaginaDeUrl());
+            setPagina(leerPaginaDeUrl());
+            setBusqueda(leerBusquedaDeUrl());
          }
       };
       window.addEventListener("hashchange", alCambiarHash);
       return () => window.removeEventListener("hashchange", alCambiarHash);
    }, []);
+
+   // La búsqueda, la categoría y la página quedan en la URL: al recargar no se pierden.
+   useEffect(() => {
+      const porDefecto = filtro === "todos" && pagina === 1 && !busqueda.trim();
+      // Sin filtros y fuera del catálogo no se toca la URL (no agrega #disenos al entrar a la web).
+      if (porDefecto && !window.location.hash.startsWith("#disenos")) return;
+      escribirEnUrl(filtro, pagina, busqueda);
+   }, [filtro, pagina, busqueda]);
 
    const buscando = busqueda.trim().length > 0;
    const encontrados = useMemo(
@@ -158,8 +169,7 @@ export function Portafolio({ onCotizar }: { onCotizar: OnCotizar }) {
 
    const elegir = (f: Filtro) => {
       setFiltro(f);
-      setPaginaEstado(1);
-      escribirEnUrl(f);
+      setPagina(1);
    };
 
    const irAPagina = (n: number) => {
@@ -196,7 +206,12 @@ export function Portafolio({ onCotizar }: { onCotizar: OnCotizar }) {
                      setBusqueda(e.target.value);
                      setPagina(1);
                   }}
-                  onKeyDown={(e) => e.key === "Escape" && setBusqueda("")}
+                  onKeyDown={(e) => {
+                     if (e.key === "Escape") {
+                        setBusqueda("");
+                        setPagina(1);
+                     }
+                  }}
                   placeholder="Busca tu temática: safari, dulces, anime, conejita…"
                   autoComplete="off"
                   className="campo h-14 rounded-full pl-14 pr-14 text-base shadow-sm [&::-webkit-search-cancel-button]:hidden"
