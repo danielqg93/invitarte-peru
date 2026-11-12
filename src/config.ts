@@ -238,9 +238,9 @@ export const proyectos: Proyecto[] = [
       palabrasClave: ["bautizo", "bautismo", "bebé", "vela", "paloma", "olivo", "religioso", "iglesia", "padrinos", "bendición", "niño", "niña", "dorado"],
       categorias: ["bautizos"],
       descripcion:
-         "Marfil, dorado y ramas de olivo; el invitado enciende la vela para abrirla. Incluye padrinos, programa y libro de bendiciones.",
-      url: `${demos}/bautizo/?v=20261111`,
-      imagen: "proyectos/bautizo.jpg?v=20261111",
+         "Marfil, dorado y ramas de olivo; el invitado abre las puertas de la iglesia hacia la luz y ve la foto del bebé en un medallón dorado. Incluye padrinos, programa y libro de bendiciones.",
+      url: `${demos}/bautizo/?v=20261111b`,
+      imagen: "proyectos/bautizo.jpg?v=20261111b",
       fondo: "bg-sol-suave",
       acento: "text-orange-600",
       destacados: ["5 bienvenidas", "4 portadas", "Libro de bendiciones", "Padrinos"],
