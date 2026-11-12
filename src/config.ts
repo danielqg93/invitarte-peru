@@ -209,8 +209,8 @@ export const proyectos: Proyecto[] = [
       categorias: ["baby-shower"],
       descripcion:
          "Nubes y globos en tonos pastel; el invitado abre un sobre con sello de huellitas y ve sus fotos en polaroids. Incluye quiniela del bebé y mesa de regalos.",
-      url: `${demos}/baby-shower/`,
-      imagen: "proyectos/baby-shower.jpg",
+      url: `${demos}/baby-shower/?v=20261111`,
+      imagen: "proyectos/baby-shower.jpg?v=20261111",
       fondo: "bg-rosa-suave",
       acento: "text-rosa-oscuro",
       destacados: ["5 bienvenidas", "4 portadas", "Quiniela del bebé", "Mesa de regalos"],
