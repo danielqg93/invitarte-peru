@@ -253,9 +253,9 @@ export const proyectos: Proyecto[] = [
       palabrasClave: ["primera comunión", "comunion", "comunión", "cáliz", "iglesia", "templo", "vitral", "religioso", "catequesis", "padrinos", "niña", "niño", "dorado"],
       categorias: ["bautizos"],
       descripcion:
-         "El invitado abre las puertas del templo bajo un vitral. Incluye misa y celebración, padrinos y velas encendidas por los invitados.",
-      url: `${demos}/primera-comunion/?v=20261111`,
-      imagen: "proyectos/primera-comunion.jpg?v=20261111",
+         "El invitado toca el cáliz y se encienden los rayos de luz; la portada es una estampita de recuerdo con la foto y un versículo. Incluye misa y celebración, padrinos y velas encendidas por los invitados.",
+      url: `${demos}/primera-comunion/?v=20261111b`,
+      imagen: "proyectos/primera-comunion.jpg?v=20261111b",
       fondo: "bg-rosa-suave",
       acento: "text-rosa-oscuro",
       destacados: ["5 bienvenidas", "4 portadas", "Velas de oración", "Padrinos"],
