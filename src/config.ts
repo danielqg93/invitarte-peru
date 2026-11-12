@@ -194,7 +194,7 @@ export const proyectos: Proyecto[] = [
       descripcion:
          "Noche en el bayou con la princesa, el sapo y el caimán ilustrados. 6 bienvenidas (foto de la quinceañera, la princesa en el nenúfar, beso al sapo, estrella de los deseos…), 5 portadas (polaroid, libro de cuentos, el bayou…), lluvia de pétalos, \"Ya Llegaré\" de fondo, juego \"Raspa la fecha\", buzón de deseos, pase con mesa y QR de ingreso, y panel para enviar cada link por WhatsApp.",
       /** Abre con un invitado de ejemplo para mostrar la invitación personalizada. */
-      url: `${demos}/princesa-sapo/?v=20261111`,
+      url: `${demos}/princesa-sapo/?v=20261111#X4HTM6YZ`,
       imagen: "proyectos/princesa-sapo.jpg?v=20261111",
       fondo: "bg-menta-suave",
       acento: "text-menta",
