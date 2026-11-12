@@ -8,4 +8,8 @@ Para usar fotos reales, cópialas aquí y pon el nombre en src/config.ts:
   imagenes.papas    foto de los papás (se recorta cuadrada, estilo polaroid)
   galeria.fotos     ecografías y fotos de la pancita (cuadradas)
 
+Personajes (imagenes.personajes): PNG transparentes del Jefe en Pañales en
+img/personajes/ (de stickpng.com, convertidos a .webp y recortados).
+Si alguno queda "", se usa el bebé jefe dibujado en SVG.
+
 Recomendado: JPG de 1000-1400 px de ancho y menos de 400 KB cada una.
