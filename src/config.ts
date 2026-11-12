@@ -219,7 +219,7 @@ export const proyectos: Proyecto[] = [
       id: "revelacion-jefe",
       titulo: "¿Jefe o Jefa?",
       tematica: "Bebé jefe de oficina",
-      paquete: "personalizada",
+      paquete: "magica",
       palabrasClave: ["revelación", "revelacion", "género", "gender reveal", "baby boss", "bebé jefazo", "jefe en pañales", "un jefe en pañales", "jefe", "jefa", "oficina", "niño o niña", "team", "votación"],
       categorias: ["baby-shower"],
       descripcion:
