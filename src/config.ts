@@ -239,11 +239,11 @@ export const proyectos: Proyecto[] = [
       categorias: ["bautizos"],
       descripcion:
          "Marfil, dorado y ramas de olivo; el invitado enciende la vela para abrirla. Incluye padrinos, programa y libro de bendiciones.",
-      url: `${demos}/bautizo/`,
-      imagen: "proyectos/bautizo.jpg",
+      url: `${demos}/bautizo/?v=20261111`,
+      imagen: "proyectos/bautizo.jpg?v=20261111",
       fondo: "bg-sol-suave",
       acento: "text-orange-600",
-      destacados: ["Vela interactiva", "Libro de bendiciones", "Padrinos", "Galería"],
+      destacados: ["5 bienvenidas", "4 portadas", "Libro de bendiciones", "Padrinos"],
    },
    {
       id: "primera-comunion",
