@@ -8,10 +8,10 @@ export const marca = {
    nombre: "Invitarte", // TODO: nombre final del emprendimiento
    eslogan: "Invitaciones digitales que se viven, no solo se leen",
    /** Número de WhatsApp con código de país, sin + ni espacios. Ej: 51987654321 */
-   whatsapp: "51923959816", // TODO
+   whatsapp: "51917670584",
    correo: "cotiza@invitarte-peru.com", // TODO
-   instagram: "https://instagram.com/invitarte-peru", // TODO (deja "" para ocultarlo)
-   tiktok: "https://tiktok.com/invitarte-peru", // TODO (deja "" para ocultarlo)
+   instagram: "https://www.instagram.com/invitarte_peru", // (deja "" para ocultarlo)
+   tiktok: "https://www.tiktok.com/@invitarte_peru", // (deja "" para ocultarlo)
    facebook: "https://facebook.com/invitarte-peru", // TODO (deja "" para ocultarlo)
    ciudad: "Piura, Perú",
    /** Días hábiles que tardas en entregar una invitación. */
