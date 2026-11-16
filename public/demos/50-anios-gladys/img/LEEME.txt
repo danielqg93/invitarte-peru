@@ -1,0 +1,12 @@
+IMÁGENES (public/img/)
+======================
+Fotos de Gladys (carpeta Pictures/Suegris), optimizadas a máx. 1400 px.
+
+  gladys-principal.jpg   foto principal (marco en arco)
+  gladys-flores.jpg      junto al versículo
+  cumple-2021/22/23.jpg  "Cada 29 de noviembre"
+  cierre.jpg             fondo del final
+  galeria-01..13.jpg     galería
+
+Para cambiar una foto, reemplaza el archivo con el mismo nombre o cambia
+el nombre en src/config.ts. Recomendado: JPG de 1000-1400 px, < 400 KB.
