@@ -294,19 +294,19 @@ export const proyectos: Proyecto[] = [
 
    /* ---------- Motor de temas (invitarte-demos) ---------- */
    {
-      id: "retro",
-      titulo: "Aventura Retro",
-      tematica: "Videojuego retro 8 bits",
+      id: "super-mario",
+      titulo: "Super Mario Bros",
+      tematica: "Aventura en el Reino Champiñón",
       paquete: "personalizada",
-      palabrasClave: ["mario", "super mario", "mario bros", "luigi", "nintendo", "videojuego", "gamer", "pixel", "monedas", "8 bits", "arcade"],
+      palabrasClave: ["mario", "super mario", "mario bros", "luigi", "yoshi", "toad", "bowser", "nintendo", "videojuego", "gamer", "pixel", "monedas", "8 bits", "arcade", "hongo", "niño"],
       categorias: ["ninos"],
       descripcion:
-         "Mundo de plataformas en pixel art, monedas que giran, música chiptune original y un mini juego para juntar monedas.",
-      url: `${demos}/retro/`,
-      imagen: "proyectos/retro.jpg",
+         "Mario, Luigi y Yoshi en el Reino Champiñón. El invitado golpea el bloque ? para entrar y descubre la fecha en un mini juego; trae pase con QR, mesa y check-in en la entrada.",
+      url: `${demos}/super-mario/?v=20261116#M4R10UP7`,
+      imagen: "proyectos/super-mario.jpg?v=20261116",
       fondo: "bg-cielo-suave",
       acento: "text-cielo",
-      destacados: ["Mini juego", "Pixel art", "Música 8 bits", "Link por invitado"],
+      destacados: ["Mini juego", "Pase con QR", "Música", "Panel de invitados"],
    },
    {
       id: "bloques",
