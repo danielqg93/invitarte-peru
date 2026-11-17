@@ -399,19 +399,19 @@ export const proyectos: Proyecto[] = [
       destacados: ["Cuenta regresiva", "Ubicación", "Confirmación por WhatsApp", "Agendar"],
    },
    {
-      id: "glam",
-      titulo: "Glam Rosa Kawaii",
-      tematica: "Moda rosa y kawaii",
-      paquete: "esencial",
-      palabrasClave: ["barbie", "hello kitty", "kitty", "rosado", "rosa", "glam", "fashion", "moda", "kawaii", "gatita", "muñeca", "princesa", "brillos"],
+      id: "barbie",
+      titulo: "Barbie",
+      tematica: "Glam rosado con Barbie",
+      paquete: "magica",
+      palabrasClave: ["barbie", "muñeca", "rosa", "rosado", "glam", "kawaii", "princesa", "moda", "brillos", "corazones", "niña", "fucsia"],
       categorias: ["ninos"],
       descripcion:
-         "Brillos, moños, tacones y una gatita kawaii con corona de flores, en tonos rosados y dorados.",
-      url: `${demos}/glam/`,
-      imagen: "proyectos/glam.jpg",
+         "Barbie en una fiesta rosada con corazones y destellos. Con galería, música, link por invitado, panel de invitados y confirmación.",
+      url: `${demos}/barbie/?v=20261117#R0SAGL4M`,
+      imagen: "proyectos/barbie.jpg?v=20261117",
       fondo: "bg-rosa-suave",
       acento: "text-rosa-oscuro",
-      destacados: ["Cuenta regresiva", "Ubicación", "Agendar", "Confirmación"],
+      destacados: ["Galería", "Música", "Link por invitado", "Panel de invitados"],
    },
 ];
 

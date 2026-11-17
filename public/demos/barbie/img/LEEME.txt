@@ -1,0 +1,9 @@
+IMÁGENES (public/img/)
+======================
+  foto-cumple.jpg     foto principal de la cumpleañera (vertical 3:4)
+  fondo.jpg           fondo de globos (bienvenida, portada y cierre)
+  galeria/*.jpg       fotos de la galería
+  personajes/*.webp   personajes sin fondo (ver `personajes` en src/config.ts)
+
+Recomendado: JPG de 1000-1600 px de ancho y menos de 400 KB cada una.
+Los personajes pertenecen a sus respectivos titulares de derechos (ver CREDITOS.md).
