@@ -91,7 +91,7 @@ export const proyectos: Proyecto[] = [
       categorias: ["ninos"],
       descripcion:
          "Estilo cómic con la foto del cumpleañero y Goku, Shenlong, música de Dragon Ball, medidor de nivel de poder, credencial de luchador y un juego de 7 esferas escondidas.",
-      url: `${demos}/dragonball/`,
+      url: `${demos}/dragonball/?v=20261116p`,
       imagen: "proyectos/dragonball.jpg",
       fondo: "bg-sol-suave",
       acento: "text-orange-600",
@@ -111,7 +111,7 @@ export const proyectos: Proyecto[] = [
       categorias: ["ninos"],
       descripcion:
          "Foto de la cumpleañera en una dona gigante, 4 bienvenidas (caramelo, frasco, boleto dorado, cupcake), música de Mundo de Caramelo, galería de fotos, animaciones al bajar y un juego para armar tu helado.",
-      url: `${demos}/dulces/`,
+      url: `${demos}/dulces/?v=20261116p`,
       imagen: "proyectos/dulces.jpg",
       fondo: "bg-lila-suave",
       acento: "text-lila",
@@ -132,7 +132,7 @@ export const proyectos: Proyecto[] = [
       categorias: ["primer-anito", "ninos"],
       descripcion:
          "Animalitos ilustrados, 5 portadas (jeep, noche, foto, letrero y sabana), 5 bienvenidas, música de fondo, pasaporte de explorador, mapa de la expedición y galería tipo polaroid.",
-      url: `${demos}/safari/`,
+      url: `${demos}/safari/?v=20261116p`,
       imagen: "proyectos/safari.jpg",
       fondo: "bg-menta-suave",
       acento: "text-menta",
@@ -147,7 +147,7 @@ export const proyectos: Proyecto[] = [
       categorias: ["ninos"],
       descripcion:
          "Plim Plim y Mei Li entre nubes, burbujas y arcoíris. Elige 1 de 4 bienvenidas y 1 de 4 portadas, con cuenta regresiva y confirmación por WhatsApp.",
-      url: `${demos}/plimplim/`,
+      url: `${demos}/plimplim/?v=20261116p`,
       imagen: "proyectos/plimplim.jpg",
       fondo: "bg-cielo-suave",
       acento: "text-cielo",
@@ -163,7 +163,7 @@ export const proyectos: Proyecto[] = [
       descripcion:
          "Invitación personalizada con el nombre, los pases y la mesa de cada invitado, y un QR de ingreso que se escanea en la entrada para validar la invitación. Sobre con sello de lacre, lluvia de pétalos, juego \"Raspa y descubre la fecha\" y panel para enviar cada link por WhatsApp.",
       /** Abre con un invitado de ejemplo para mostrar la invitación personalizada. */
-      url: `${demos}/boda/#WWCCN2ER`,
+      url: `${demos}/boda/?v=20261116p#WWCCN2ER`,
       imagen: "proyectos/boda.jpg",
       fondo: "bg-menta-suave",
       acento: "text-menta",
@@ -178,7 +178,7 @@ export const proyectos: Proyecto[] = [
       categorias: ["matrimonios"],
       descripcion:
          "Un árbol crece con hojas de corazón y, al abrirla, los corazones vuelan. Cinco años en cinco anillos, cuenta regresiva y deseos para la pareja.",
-      url: `${demos}/bodas-de-madera/`,
+      url: `${demos}/bodas-de-madera/?v=20261116p`,
       imagen: "proyectos/bodas-de-madera.jpg",
       fondo: "bg-sol-suave",
       acento: "text-orange-700",
@@ -194,7 +194,7 @@ export const proyectos: Proyecto[] = [
       descripcion:
          "Noche en el bayou con la princesa, el sapo y el caimán ilustrados. 6 bienvenidas (foto de la quinceañera, la princesa en el nenúfar, beso al sapo, estrella de los deseos…), 5 portadas (polaroid, libro de cuentos, el bayou…), lluvia de pétalos, \"Ya Llegaré\" de fondo, juego \"Raspa la fecha\", buzón de deseos, pase con mesa y QR de ingreso, y panel para enviar cada link por WhatsApp.",
       /** Abre con un invitado de ejemplo para mostrar la invitación personalizada. */
-      url: `${demos}/princesa-sapo/?v=20261111#X4HTM6YZ`,
+      url: `${demos}/princesa-sapo/?v=20261116p#X4HTM6YZ`,
       imagen: "proyectos/princesa-sapo.jpg?v=20261111",
       fondo: "bg-menta-suave",
       acento: "text-menta",
@@ -224,7 +224,7 @@ export const proyectos: Proyecto[] = [
       categorias: ["baby-shower"],
       descripcion:
          "El Jefe en Pañales convoca a una junta directiva: expediente confidencial, votación Team Jefe o Team Jefa, pistas y sobre sellado.",
-      url: `${demos}/revelacion-jefe/?v=20261111b`,
+      url: `${demos}/revelacion-jefe/?v=20261116p`,
       imagen: "proyectos/revelacion-jefe.jpg?v=20261111b",
       fondo: "bg-cielo-suave",
       acento: "text-cielo",
@@ -285,7 +285,7 @@ export const proyectos: Proyecto[] = [
       categorias: ["ninos"],
       descripcion:
          "Las guerreras K-pop en un concierto de neón bajo la luna. El invitado rasga su entrada para abrirla, con cuenta regresiva, ubicación y confirmación por WhatsApp.",
-      url: `${demos}/guerreras-kpop/?v=20261116`,
+      url: `${demos}/guerreras-kpop/?v=20261116p`,
       imagen: "proyectos/guerreras-kpop.jpg?v=20261116",
       fondo: "bg-lila-suave",
       acento: "text-lila",
@@ -302,7 +302,7 @@ export const proyectos: Proyecto[] = [
       categorias: ["ninos"],
       descripcion:
          "Mario, Luigi y Yoshi en el Reino Champiñón. El invitado golpea el bloque ? para entrar y descubre la fecha en un mini juego; con galería, música, link por invitado y panel de invitados.",
-      url: `${demos}/super-mario/?v=20261116c#M4R10UP7`,
+      url: `${demos}/super-mario/?v=20261116p#M4R10UP7`,
       imagen: "proyectos/super-mario.jpg?v=20261116b",
       fondo: "bg-cielo-suave",
       acento: "text-cielo",
@@ -317,7 +317,7 @@ export const proyectos: Proyecto[] = [
       categorias: ["ninos"],
       descripcion:
          "Steve, Alex y el Creeper en un mundo de bloques. El invitado pica el bloque para entrar y rompe bloques para descubrir la fecha; con galería, música, link por invitado y panel de invitados.",
-      url: `${demos}/minecraft/?v=20261116b#CR33P3RX`,
+      url: `${demos}/minecraft/?v=20261116p#CR33P3RX`,
       imagen: "proyectos/minecraft.jpg?v=20261116",
       fondo: "bg-menta-suave",
       acento: "text-menta",
@@ -332,7 +332,7 @@ export const proyectos: Proyecto[] = [
       categorias: ["ninos"],
       descripcion:
          "Spider-Man en una ciudad de noche estilo cómic. El invitado toca la máscara para entrar y lanza telarañas para descubrir la fecha; con galería, música, link por invitado y panel de invitados.",
-      url: `${demos}/spiderman/?v=20261116#SP1D3RW3`,
+      url: `${demos}/spiderman/?v=20261116p#SP1D3RW3`,
       imagen: "proyectos/spiderman.jpg?v=20261116",
       fondo: "bg-rosa-suave",
       acento: "text-rosa-oscuro",
