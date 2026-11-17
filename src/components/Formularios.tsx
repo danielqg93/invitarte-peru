@@ -165,7 +165,7 @@ export function Cotizador({
                            onChange={set("paquete")}
                            className="sr-only"
                         />
-                        <span className="flex items-baseline justify-between gap-2">
+                        <span className="flex flex-wrap items-baseline justify-between gap-x-2">
                            <span className="font-titulo text-lg font-semibold">{p.nombre}</span>
                            {mostrarPrecios && (
                               <span className="whitespace-nowrap font-titulo font-bold text-rosa">{precioDe(p)}</span>
