@@ -497,7 +497,7 @@ export const paquetes = [
          "Animaciones especiales",
          "Mesa y pase con QR por invitado",
          "Check-in con escáner en la entrada",
-         "Cambios ilimitados*",
+         "Hasta 3 rondas de cambios*",
       ],
    },
 ];
