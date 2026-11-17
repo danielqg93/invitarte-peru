@@ -485,7 +485,7 @@ export const paquetes = [
    {
       id: "personalizada",
       nombre: "Personalizada",
-      precio: "S/ 189",
+      precio: "S/ 219",
       desde: true,
       precioEspecial: "S/ 249",
       diasActiva: 30,
