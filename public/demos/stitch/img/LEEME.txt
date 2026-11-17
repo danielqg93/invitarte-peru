@@ -1,0 +1,8 @@
+IMÁGENES (public/img/)
+======================
+  foto-cumple.jpg     foto principal de la cumpleañera (vertical 3:4)
+  playa.jpg           playa de fondo (bienvenida, portada y cierre)
+  personajes/*.webp   personajes sin fondo (ver `personajes` en src/config.ts)
+
+Recomendado: JPG de 1000-1600 px de ancho y menos de 400 KB cada una.
+Los personajes pertenecen a sus respectivos titulares de derechos (ver CREDITOS.md).
