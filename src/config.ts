@@ -91,7 +91,7 @@ export const proyectos: Proyecto[] = [
       categorias: ["ninos"],
       descripcion:
          "Estilo cómic con la foto del cumpleañero y Goku, Shenlong, música de Dragon Ball, medidor de nivel de poder, credencial de luchador y un juego de 7 esferas escondidas.",
-      url: `${demos}/dragonball/?v=20261116p`,
+      url: `${demos}/dragonball/?v=20261117`,
       imagen: "proyectos/dragonball.jpg",
       fondo: "bg-sol-suave",
       acento: "text-orange-600",
