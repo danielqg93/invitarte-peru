@@ -441,7 +441,7 @@ export const nombreCategoria = (id: CategoriaId) =>
  * false = oculta todos los precios (paquetes, extras, etiquetas del catálogo
  * y cotizador). Los precios de abajo se conservan para volver a mostrarlos.
  */
-export const mostrarPrecios = false;
+export const mostrarPrecios = true;
 
 export const paquetes = [
    {
