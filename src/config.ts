@@ -476,6 +476,7 @@ export const paquetes = [
          "Galería de fotos",
          "Música de fondo",
          "Links personalizados por invitado",
+         "Panel de invitados",
          "Lista de confirmados",
          "Contenido que aparece al hacer scroll",
       ],
