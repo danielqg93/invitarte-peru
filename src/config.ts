@@ -280,16 +280,16 @@ export const proyectos: Proyecto[] = [
       id: "guerreras-kpop",
       titulo: "Gira de las Guerreras K-pop",
       tematica: "Concierto K-pop de neón",
-      paquete: "personalizada",
+      paquete: "esencial",
       palabrasClave: ["kpop", "k-pop", "kpop demon hunters", "guerreras kpop", "idol", "idols", "concierto", "corea", "coreano", "neón", "lightstick", "bts", "blackpink", "huntrix", "niña", "adolescente", "morado", "rosado"],
       categorias: ["ninos"],
       descripcion:
-         "Concierto de neón bajo la luna; el invitado rasga su entrada para abrirla y elige el color de su lightstick, que cambia toda la invitación.",
-      url: `${demos}/guerreras-kpop/`,
-      imagen: "proyectos/guerreras-kpop.jpg",
+         "Las guerreras K-pop en un concierto de neón bajo la luna. El invitado rasga su entrada para abrirla, con cuenta regresiva, ubicación y confirmación por WhatsApp.",
+      url: `${demos}/guerreras-kpop/?v=20261116`,
+      imagen: "proyectos/guerreras-kpop.jpg?v=20261116",
       fondo: "bg-lila-suave",
       acento: "text-lila",
-      destacados: ["Entrada para rasgar", "Lightstick", "Setlist", "Pide tu canción"],
+      destacados: ["Entrada para rasgar", "Personajes", "Cuenta regresiva", "WhatsApp"],
    },
 
    /* ---------- Motor de temas (invitarte-demos) ---------- */
